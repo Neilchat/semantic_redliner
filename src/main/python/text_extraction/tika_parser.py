@@ -17,4 +17,4 @@ class TikaParser:
 if __name__ == "__main__":
     p = TikaParser()
     text = p.get_text("/Users/saswata/Documents/semantic_redliner/src/main/python/data/Jan 2015.docx")
-    print(len(text.split(" ")))
+    print(text)
