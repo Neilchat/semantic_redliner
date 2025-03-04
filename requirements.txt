@@ -1,0 +1,8 @@
+requests
+tika
+pydantic
+langchain
+langchain-openai==0.2.1
+langchain-qdrant==0.1.4
+langgraph
+typing-extensions==4.11.0
