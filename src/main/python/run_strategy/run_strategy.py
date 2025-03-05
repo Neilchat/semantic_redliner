@@ -6,7 +6,8 @@ if __name__ == "__main__":
                             "https://api.openai.com",
                             "",
                             "gpt-4o-mini",
-                            "")
-    strategy = AutoStrategy.from_reference("naiveCompare", config)
+                            "text-embedding-ada-002")
+
+    strategy = AutoStrategy.from_reference("sectionWiseCompare", config)
     strategy.compare_docs("/Users/saswata/Documents/semantic_redliner/src/main/python/data/Jan 2015.docx",
                           "/Users/saswata/Documents/semantic_redliner/src/main/python/data/Mar 2023.docx")

@@ -1,8 +1,10 @@
 from models.strategy_config import StrategyConfig
 from naive_compare.naive_compare import NaiveCompare
+from sectionwise_compare.sectionwise_compare import SectionWiseCompare
 
 STRATEGY_MAPPING = {
-    "naiveCompare": NaiveCompare
+    "naiveCompare": NaiveCompare,
+    "sectionWiseCompare": SectionWiseCompare
 }
 
 class AutoStrategy:

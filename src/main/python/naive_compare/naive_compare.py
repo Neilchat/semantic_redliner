@@ -11,9 +11,7 @@ class NaiveCompare(BaseStrategy):
         self.llm = OpenAI(api_key=config.openai_api_key)
         self.tika_parser = TikaParser()
 
-    def compare_docs(self, docpath1, docpath2) -> str:
-        text_2015 = self.tika_parser.get_text(docpath1)
-        text_2023 = self.tika_parser.get_text(docpath2)
+    def compare_docs(self, text_1, text_2) -> str:
 
         system_prompt = \
         """
@@ -28,10 +26,10 @@ class NaiveCompare(BaseStrategy):
 You have been given two versions of publicly available Apple Music’s Terms & Conditions from different years as follows.
 
 Apple Music's terms and conditions from 2015: 
-{text_2015}
+{text_1}
         
 Apple Music's terms and conditions from 2023: 
-{text_2023}
+{text_2}
 
 Please build a solution to summarise the differences between the two documents, and provide insights for the legal team by completing the following analysis:
 -	A commentary on the nature of the differences to help the legal team understand impact and significance (e.g. substantive meaningful change over form).
