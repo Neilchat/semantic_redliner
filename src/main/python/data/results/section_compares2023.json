@@ -1,0 +1,469 @@
+ {
+  " ._. Apple Media Services Terms and Conditions": {
+    "comparison": "Based on the provided sections from the 2015 report and the 2023 report, here are the changes identified:\n\n1. **Terminology Change**: The 2023 report refers to \"Apple Media Services\" instead of \"iTunes\" as seen in the 2015 report. This indicates a rebranding or a shift in the service's identity.\n\n2. **General Structure**: The 2023 report introduces the term \"Agreement\" to describe the contract between the user and Apple, which is not explicitly mentioned in the 2015 report.\n\n3. **Clarity and Directness**: The 2023 report emphasizes the importance of reading the Agreement carefully, which is not explicitly stated in the 2015 report.\n\nThese changes reflect a shift in branding, terminology, and a more direct approach to user engagement in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CHANGES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CHANGES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE SERVICE"
+    ],
+    "path": " ._. Apple Media Services Terms and Conditions"
+  },
+  "Apple Media Services Terms and Conditions ._. A. INTRODUCTION TO OUR SERVICES": {
+    "comparison": "1. **Terminology and Scope**: \n   - In 2023, the term \"Services\" is used broadly to encompass various offerings such as App Store, Apple Arcade, Apple Music, etc., while in 2015, the focus was primarily on the iTunes Store and its associated services. The 2023 report reflects a more comprehensive range of services beyond just iTunes.\n\n2. **Home Country Specification**: \n   - The 2023 report introduces the concept of specifying a \"Home Country\" when creating an account for the Services, which is not mentioned in the 2015 report.\n\n3. **Age Restrictions**: \n   - The 2023 report does not specify age restrictions for account creation, whereas the 2015 report explicitly states that only persons aged 13 years or older can create accounts, and provides guidelines for accounts created for persons under 13.\n\n4. **Geographic Availability**: \n   - The 2023 report does not limit the availability of Services to a specific country (e.g., the United Kingdom as mentioned in the 2015 report), indicating a broader availability of Services.\n\n5. **Performance Factors**: \n   - The 2023 report mentions that the performance of Services may be affected by factors such as hardware, software, and Internet access, which is a more generalized statement compared to the specific requirements and recommendations outlined in the 2015 report.\n\n6. **Content Definition**: \n   - The 2023 report uses the term \"Content\" to refer to a broader range of offerings, including Apps and in-app services, while the 2015 report primarily refers to \"iTunes Products\" and \"Products\" in a more limited context.\n\nThese changes reflect a shift in Apple's service offerings and user engagement strategies from 2015 to 2023, indicating a more integrated and expansive approach to digital content and services.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE SERVICE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THE MAC APP STORE, APP STORE AND IBOOKS STORE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. PRIVACY"
+    ],
+    "path": "Apple Media Services Terms and Conditions ._. A. INTRODUCTION TO OUR SERVICES"
+  },
+  "B. USING OUR SERVICES ._. PAYMENTS, TAXES AND REFUNDS": {
+    "comparison": "Here are the significant changes between the 2023 and 2015 Terms and Conditions reports:\n\n1. **Transaction Definition**: In 2023, the term \"Transaction\" is explicitly defined as acquiring Content for free or for a charge, whereas this definition is not present in the 2015 report.\n\n2. **Merchant of Record**: The 2023 report specifies that Apple Distribution International Ltd. is the merchant of record for some Content acquired from Apple Books, Apple Podcasts, or App Store, which is not mentioned in the 2015 report.\n\n3. **Payment Method Management**: The 2023 report provides detailed instructions on managing payment methods and the authorization to charge multiple payment methods in a specific order, which is not addressed in the 2015 report.\n\n4. **Cancellation Rights**: The 2023 report includes a clear right of cancellation within 14 days of receipt, along with specific instructions on how to cancel an order and the effects of cancellation, which are not as explicitly detailed in the 2015 report.\n\n5. **Refund Policy**: The 2023 report outlines that if technical problems prevent or delay delivery of Content, the exclusive remedy is either replacement or refund, which is not specified in the 2015 report.\n\n6. **Electronic Invoices**: The 2023 report states that users agree to receive all invoices in an electronic format, which is not mentioned in the 2015 report.\n\n7. **Automatic Updates of Payment Information**: The 2023 report mentions that Apple may automatically update payment information based on data from payment networks or financial institutions, which is not present in the 2015 report.\n\n8. **Fraud and Abuse Clause**: The 2023 report includes a clause stating that Apple may suspend or cancel payments or refuse refunds if there is evidence of fraud, abuse, or unlawful behavior, which is not mentioned in the 2015 report.\n\n9. **Model Cancellation Form**: The 2023 report provides a model cancellation form with specific details to include, which is not present in the 2015 report.\n\nThese changes reflect a more detailed and structured approach to payments, cancellations, and user rights in the 2023 report compared to the 2015 version.",
+    "sections": [
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP SUBSCRIPTIONS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. USE OF PRODUCTS AND THE STORES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. YOUR ACCOUNT",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. ELECTRONIC CONTRACTING",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. PRE-ORDERS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS"
+    ],
+    "path": "B. USING OUR SERVICES ._. PAYMENTS, TAXES AND REFUNDS"
+  },
+  "B. USING OUR SERVICES ._. ACCOUNT": {
+    "comparison": "Here are the changes from the 2023 report compared to the 2015 report:\n\n1. **Age Requirement Clarification**: \n   - The 2023 report specifies that the minimum age to create an account is 13 years or the equivalent minimum age in the user's Home Country, as set forth in the Apple ID creation process. This additional detail about the \"equivalent minimum age\" is not present in the 2015 report.\n\n2. **Legacy Contact Information**: \n   - The 2023 report introduces the concept of a Legacy Contact, allowing users to add, notify, or remove a Legacy Contact for their Apple ID, which is not mentioned in the 2015 report.\n\n3. **Parental Guidance for Minors**: \n   - The 2023 report emphasizes that a parent or legal guardian creating an account for a minor should review the Agreement with the minor to ensure understanding, which is not explicitly stated in the 2015 report.\n\n4. **Game Center Account Requirement**: \n   - The 2023 report mentions that use of Game Center is subject to the Agreement and requires a Game Center account, which is not addressed in the 2015 report.\n\nThese points highlight the significant changes and additions in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE SERVICE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE STORES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. YOUR ACCOUNT",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. YOUR ACCOUNT",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. FAMILY SHARING",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. MISCELLANEOUS"
+    ],
+    "path": "B. USING OUR SERVICES ._. ACCOUNT"
+  },
+  "B. USING OUR SERVICES ._. PRIVACY": {
+    "comparison": "Here are the changes between the 2023 and 2015 reports:\n\n1. **Privacy Policy Reference**: \n   - In 2023, the Privacy Policy is referenced as being available at a specific URL (https://www.apple.com/legal/privacy/), while in 2015, the URL provided is different (http://www.apple.com/uk/privacy/).\n\n2. **Monitoring of Usage**: \n   - The 2023 report explicitly states that \"Apple may monitor your use of the Services and Content to ensure that you are following these Usage Rules.\" This specific mention of monitoring is not present in the 2015 report.\n\n3. **Terminology**: \n   - The 2023 report refers to \"Services and Content,\" while the 2015 report primarily uses \"iTunes Products\" and \"Products.\" This indicates a potential shift in terminology and possibly the scope of what is covered under the terms.\n\n4. **Material Breach Clause**: \n   - The 2023 report states that any other use of the Services and Content is a \"material breach of this Agreement,\" which is not explicitly stated in the 2015 report.\n\nThese points highlight the significant changes and updates made in the 2023 Terms and Conditions compared to those from 2015.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USE OF CONTENT",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CONTENT SECURITY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. USE OF PRODUCTS AND THE STORES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. MISCELLANEOUS"
+    ],
+    "path": "B. USING OUR SERVICES ._. PRIVACY"
+  },
+  "B. USING OUR SERVICES ._. SERVICES AND CONTENT USAGE RULES": {
+    "comparison": "None.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USE OF CONTENT",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CONTENT SECURITY",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USAGE RULES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. USE OF PRODUCTS AND THE STORES"
+    ],
+    "path": "B. USING OUR SERVICES ._. SERVICES AND CONTENT USAGE RULES"
+  },
+  "B. USING OUR SERVICES ._. DOWNLOADS": {
+    "comparison": "The following statements from the 2023 report are either new or significantly changed compared to the 2015 report:\n\n1. **Limitation on Downloads**: The 2023 report explicitly states that \"You may be limited in the amount of Content you may download,\" which is not mentioned in the 2015 report.\n\n2. **Expiration of Downloaded Content**: The 2023 report includes a statement that \"some downloaded Content may expire after a given amount of time after downloaded or first played,\" which is not present in the 2015 report.\n\n3. **Redownload Availability**: The 2023 report specifies that \"Content may not be available for Redownload if that Content is no longer offered on our Services,\" which is a clarification not found in the 2015 report.\n\n4. **Removal of Content**: The 2023 report states that \"Content also may be removed from our Services at any time (for instance, because the provider removed it), after which it cannot be downloaded, redownloaded, or otherwise accessed from Apple.\" This provision regarding the removal of content is not mentioned in the 2015 report.\n\nThese changes reflect a more explicit and detailed approach to content availability and limitations in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. AUTOMATIC DELIVERY AND DOWNLOADING PREVIOUS PURCHASES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. AUTOMATIC DELIVERY AND DOWNLOADING PREVIOUS PURCHASES",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP PURCHASES",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP SUBSCRIPTIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. PRE-ORDERS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. AUTOMATIC DELIVERY OF UPDATES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS"
+    ],
+    "path": "B. USING OUR SERVICES ._. DOWNLOADS"
+  },
+  "B. USING OUR SERVICES ._. SUBSCRIPTIONS": {
+    "comparison": "Here are the statements from the 2023 report that were missing or significantly changed compared to the 2015 report:\n\n1. **Notification of Price Increase**: The 2023 report includes a statement that users will be notified if the price of a Paid Subscription increases and that their consent will be required to continue. This specific provision is not present in the 2015 report.\n\n2. **Responsibility for Uncollected Amounts**: The 2023 report states that if Apple cannot charge the payment method for any reason and the user has not canceled the Paid Subscription, the user remains responsible for any uncollected amounts. This specific responsibility clause is not mentioned in the 2015 report.\n\n3. **Change to Subscription Period Start Date**: The 2023 report mentions that if there is an issue with charging the payment method, it may result in a change to the start of the next Paid Subscription period and the billing date, which is not addressed in the 2015 report.\n\n4. **Cancellation of Subscription**: The 2023 report reserves the right to cancel a Paid Subscription if Apple is unable to successfully charge the payment method to renew the subscription. This specific right is not mentioned in the 2015 report.\n\n5. **Free Trial Terms**: The 2023 report specifies that if a user starts a free trial for an Apple Paid Subscription and cancels before it ends, they cannot reactivate the free trial. This specific condition regarding reactivation of free trials is not present in the 2015 report.\n\n6. **Free Trials and Apple One**: The 2023 report states that free trials or offers for Apple Paid Subscriptions cannot be combined with any free trials or offers of Apple One, and that if a user is in a free trial for any Apple Paid Subscriptions and subscribes to Apple One, their free trial(s) will not be paused. This specific provision is not found in the 2015 report.\n\n7. **Loss of Access Upon Subscription End**: The 2023 report clearly states that when a Paid Subscription ends, the user will lose access to any functionality or content that requires a Paid Subscription. This explicit statement is not present in the 2015 report.\n\nThese changes reflect a more detailed and structured approach to subscriptions, cancellations, and trials in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP SUBSCRIPTIONS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP PURCHASES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. YOUR ACCOUNT",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. ELECTRONIC CONTRACTING",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. PRE-ORDERS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY"
+    ],
+    "path": "B. USING OUR SERVICES ._. SUBSCRIPTIONS"
+  },
+  "B. USING OUR SERVICES ._. CONTENT AND SERVICE AVAILABILITY": {
+    "comparison": "The following statements from the 2023 report are either new or significantly changed compared to the 2015 report:\n\n1. **Home Country Reference**: The 2023 report specifically mentions \"Home Country\" and states that terms related to services and content not available in the Home Country are not applicable unless they become available. This specific reference to \"Home Country\" is not present in the 2015 report.\n\n2. **Content Availability When Traveling**: The 2023 report includes a provision that certain services and content available in the Home Country may not be available when traveling outside of the Home Country, except if required by law. This specific mention of availability while traveling is not found in the 2015 report.\n\n3. **Link to Support Page**: The 2023 report provides a specific link (https://support.apple.com/HT204411) for users to check the content types available in their Home Country, which is not present in the 2015 report.\n\nThese changes reflect a more explicit focus on the concept of \"Home Country\" and the implications for content availability based on geographic location in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE SERVICE",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE STORES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. AUTOMATIC DELIVERY AND DOWNLOADING PREVIOUS PURCHASES"
+    ],
+    "path": "B. USING OUR SERVICES ._. CONTENT AND SERVICE AVAILABILITY"
+  },
+  "B. USING OUR SERVICES ._. THIRD-PARTY DEVICES AND EQUIPMENT": {
+    "comparison": "The following statements from the 2023 report are either missing or significantly changed compared to the 2015 report:\n\n1. **Third-Party Devices and Equipment**: The 2023 report explicitly states that \"You may not be able to use all features of the Services when accessing them on a non-Apple-branded device.\" This specific mention of non-Apple-branded devices is not present in the 2015 report.\n\n2. **Automatic Updates on Third-Party Equipment**: The 2023 report includes a provision that \"By using the Services, you agree that Apple may automatically download and install minor updates to its software on third-party equipment from time to time.\" This specific clause regarding automatic updates on third-party equipment is not found in the 2015 report.\n\nThese points highlight the changes in the 2023 report regarding the use of third-party devices and the handling of software updates.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. AUTOMATIC DELIVERY OF UPDATES",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE SERVICE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. STORE SECURITY",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. ELECTRONIC CONTRACTING",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. AUTOMATIC DELIVERY AND DOWNLOADING PREVIOUS PURCHASES"
+    ],
+    "path": "B. USING OUR SERVICES ._. THIRD-PARTY DEVICES AND EQUIPMENT"
+  },
+  "C. YOUR SUBMISSIONS TO OUR SERVICES ._. Submissions Guidelines": {
+    "comparison": "None.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. SUBMISSIONS TO THE STORES",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. ELECTRONIC CONTRACTING",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CONTENT SECURITY",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE SERVICE",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY"
+    ],
+    "path": "C. YOUR SUBMISSIONS TO OUR SERVICES ._. Submissions Guidelines"
+  },
+  "Apple Media Services Terms and Conditions ._. D. FAMILY SHARING": {
+    "comparison": "Here are the statements from the 2023 report that were either added or significantly changed compared to the 2015 report:\n\n1. **Family Sharing Features**: The 2023 report specifies that Apple devices are required for access to all Family Sharing features, which is not mentioned in the 2015 report.\n\n2. **Purchase Sharing**: The 2023 report explicitly states that Family Sharing\u2019s Purchase Sharing feature allows eligible Content to be shared among up to six members of a Family, whereas the 2015 report does not detail this feature in the same way.\n\n3. **Payment Method and Transactions**: The 2023 report clarifies that the Organizer's eligible payment methods are used to pay for any Transaction initiated by a Family member, and it specifies that Family members act as agents for the Organizer when the Organizer\u2019s payment methods are used. This level of detail regarding payment methods and the responsibilities of the Organizer is more explicit in the 2023 report.\n\n4. **Ask to Buy Feature**: The 2023 report provides more detailed conditions regarding the Ask to Buy feature, including that it is enabled by default for any Family member under the age of 13 and that it cannot be turned back on after being turned off once the Family member turns 18. The 2015 report does not include these specific conditions.\n\n5. **Family Member Changes**: The 2023 report states that when a Family member leaves or is removed from the Family, the remaining Family members may no longer be able to access the former member\u2019s Content, which is presented in a more detailed manner compared to the 2015 report.\n\n6. **Content Eligibility for Purchase Sharing**: The 2023 report specifies that not all Content, including In-App Purchases, subscriptions, and some previously acquired Apps, are eligible for Purchase Sharing, which is a more detailed clarification than what is provided in the 2015 report.\n\n7. **Subscriptions Automatically Enabled for Family Sharing**: The 2023 report lists specific subscriptions (Apple TV+, Apple TV Channels, Apple One Family, Apple One Premier, Apple Music Family, Apple Arcade, Apple News+, and Apple Fitness+) that are automatically enabled for Family Sharing, which is not mentioned in the 2015 report.\n\n8. **Content Usage Limitations**: The 2023 report mentions that subscriptions shared by a Family may be subject to Content usage limitations on a per subscription basis, which is a new addition not present in the 2015 report.\n\nThese changes reflect a more detailed and structured approach to Family Sharing in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. FAMILY SHARING",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE SERVICE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE STORES",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. APP STORE PRODUCT USAGE RULES",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. GIFTS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY"
+    ],
+    "path": "Apple Media Services Terms and Conditions ._. D. FAMILY SHARING"
+  },
+  "Apple Media Services Terms and Conditions ._. E. SERIES PASS AND MULTI-PASS": {
+    "comparison": "The following statements from the 2023 report are either missing or significantly changed compared to the 2015 report:\n\n1. **Definition of Pass Types**: The 2023 report introduces specific definitions for \"Series Pass\" and \"Multi-Pass,\" explaining that a Series Pass applies to television content with a limited number of episodes, while a Multi-Pass applies to ongoing television content. This distinction is not present in the 2015 report.\n\n2. **Transaction Timing**: The 2023 report states that the full price of a Series Pass or Multi-Pass is charged at the time of the transaction. This specific timing detail is not mentioned in the 2015 report.\n\n3. **Download Availability**: The 2023 report specifies that Series Pass or Multi-Pass content is available for download up to 90 days after the last episode becomes available. This specific time frame is not addressed in the 2015 report.\n\n4. **Credit for Unprovided Episodes**: The 2023 report includes a provision that if a content provider delivers fewer TV episodes than planned when a Series Pass is purchased, Apple will credit the retail value of the corresponding number of episodes not provided to the user's Apple ID. This specific credit policy is not mentioned in the 2015 report.\n\nThese changes reflect a more detailed and structured approach to the Series Pass and Multi-Pass offerings in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP SUBSCRIPTIONS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP PURCHASES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. AUTOMATIC DELIVERY AND DOWNLOADING PREVIOUS PURCHASES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. AUTOMATIC DELIVERY AND DOWNLOADING PREVIOUS PURCHASES",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USAGE RULES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. PRE-ORDERS",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. GIFTS"
+    ],
+    "path": "Apple Media Services Terms and Conditions ._. E. SERIES PASS AND MULTI-PASS"
+  },
+  "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. LICENSE OF APP STORE CONTENT": {
+    "comparison": "Here are the statements from the 2023 report that were not present or significantly changed in the 2015 report:\n\n1. **Agent Role of Apple**: The 2023 report explicitly states that \"Apple acts as an agent for App Providers in operating the App Store and is not a party to the sales contract or user agreement between you and the App Provider.\" This specific clarification about Apple's role as an agent is not present in the 2015 report.\n\n2. **Merchant of Record**: The 2023 report mentions that if you are a customer of Apple Distribution International Ltd., \"the merchant of record is Apple Distribution International Ltd., which means that you acquire the App license from Apple Distribution International Ltd., but the App is licensed by the App Provider.\" This detail about the merchant of record is not included in the 2015 report.\n\n3. **Terminology**: The 2023 report introduces specific terminology, defining \"Apple App\" and \"Third Party App,\" which is not explicitly defined in the 2015 report.\n\n4. **Third-Party Beneficiary**: The 2023 report states, \"You acknowledge and agree that Apple is a third-party beneficiary of the Standard EULA or Custom EULA applicable to each Third Party App and may therefore enforce such agreement.\" This specific mention of Apple as a third-party beneficiary is not found in the 2015 report.\n\n5. **Access to Certain Apps**: The 2023 report includes a note about certain Apps, such as stickers and iMessage apps, stating that \"may not appear on the device springboard but can be accessed and used in the Messages app drawer.\" This specific information regarding the accessibility of certain apps is not present in the 2015 report.\n\nThese changes reflect a more detailed and clarified structure regarding the licensing of apps and the roles of Apple and App Providers in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. LICENSED APPLICATION END USER LICENCE AGREEMENT",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. LICENSE OF MAC APP STORE AND APP STORE PRODUCTS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT",
+      "FURTHER IBOOKS STORE TERMS AND CONDITIONS ._. LICENSE OF IBOOKS STORE PRODUCTS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THE MAC APP STORE, APP STORE AND IBOOKS STORE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. SUBMISSIONS TO THE STORES"
+    ],
+    "path": "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. LICENSE OF APP STORE CONTENT"
+  },
+  "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. IN-APP PURCHASES": {
+    "comparison": "Here are the changes between the 2023 and 2015 reports regarding In-App Purchases:\n\n1. **Terminology**: In 2023, the term \"In-App Purchases\" is defined as \"content, services or functionality for use within such Apps,\" whereas in 2015, it is referred to as \"additional services, or licenses to additional functionality or content for use within the App Store Product.\"\n\n2. **Authentication Process**: In 2023, it specifies that you must authenticate your account before making In-App Purchases \"separate from any authentication to obtain other Content,\" while in 2015, it states that you must authenticate to acquire In-App Purchases separately from any authentication to obtain App Store Products.\n\n3. **Re-authentication Timeframe**: In 2023, it mentions that you can make additional In-App Purchases for fifteen minutes without re-authenticating unless you have asked to require a password for every purchase or have enabled Touch ID or Face ID. In 2015, it states that once you have authenticated, you will be able to acquire additional In-App Purchases for fifteen minutes without re-entering your password, but does not mention the option to require a password for every purchase.\n\n4. **Loss Liability**: The 2023 report does not include a statement about iTunes being without liability in the event of any loss, destruction, or damage of a consumable In-App Purchase, which is present in the 2015 report.\n\n5. **Turning Off In-App Purchases**: In 2023, it provides a link to instructions for turning off In-App Purchases, while in 2015, it describes the process as going to Settings, selecting \u201cGeneral,\u201d and then selecting the \u201cRestrictions\u201d tab.\n\nThese are the significant changes observed between the 2023 and 2015 reports regarding In-App Purchases.",
+    "sections": [
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP PURCHASES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. YOUR ACCOUNT",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. YOUR ACCOUNT",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP SUBSCRIPTIONS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. APP STORE PRODUCT USAGE RULES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. APP BUNDLES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THE MAC APP STORE, APP STORE AND IBOOKS STORE",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE"
+    ],
+    "path": "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. IN-APP PURCHASES"
+  },
+  "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. APP MAINTENANCE AND SUPPORT": {
+    "comparison": "The following changes can be identified between the 2023 and 2015 reports regarding App Maintenance and Support:\n\n1. **Responsibility for Maintenance and Support**: \n   - In 2023, it is explicitly stated that \"Apple is responsible for providing maintenance and support for Apple Apps only, or as required under applicable law.\" \n   - In 2015, the responsibility for maintenance and support is attributed to \"iTunes\" rather than \"Apple,\" and it specifies that \"iTunes will be responsible for providing any maintenance and support services with respect to the Apple Products only.\" \n\n2. **Terminology**: \n   - The term \"App Providers\" is used in 2023 to refer to those responsible for Third Party Apps, whereas in 2015, the term \"Publisher\" is used to describe the entity responsible for Third-Party Products.\n\n3. **Clarity on Third Party Apps**: \n   - The 2023 report clearly delineates the responsibilities of App Providers for Third Party Apps, while the 2015 report refers to the \"Publisher\" of any Third-Party Product being solely responsible for maintenance and support services.\n\nThese changes reflect a shift in terminology and a clearer delineation of responsibilities between Apple and third-party developers.",
+    "sections": [
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. LICENSE OF MAC APP STORE AND APP STORE PRODUCTS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THE MAC APP STORE, APP STORE AND IBOOKS STORE",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. AUTOMATIC DELIVERY OF UPDATES"
+    ],
+    "path": "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. APP MAINTENANCE AND SUPPORT"
+  },
+  "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. APP BUNDLES": {
+    "comparison": "The following statements from the 2023 report on App Bundles are either new or significantly changed compared to the 2015 report:\n\n1. The term \"Apps\" is used in the 2023 report, while the 2015 report refers to \"App Store Products.\" This change in terminology may reflect a broader or more specific categorization of the items included in the bundles.\n\n2. The 2023 report specifies that the App Bundle price \"may include a minimum charge to complete the App Bundle,\" which is not explicitly mentioned in the 2015 report. This addition clarifies that there could be a baseline cost associated with completing the purchase of an App Bundle.\n\nThese changes indicate a slight evolution in the language and clarity regarding pricing structures for App Bundles between 2015 and 2023.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. APP BUNDLES",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP SUBSCRIPTIONS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP PURCHASES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THE MAC APP STORE, APP STORE AND IBOOKS STORE",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. LICENSE OF MAC APP STORE AND APP STORE PRODUCTS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES"
+    ],
+    "path": "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. APP BUNDLES"
+  },
+  "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. SEARCH RESULTS AND RANKINGS": {
+    "comparison": "The section from the 2023 Terms and Conditions report includes the following statements that were not present or significantly changed in the 2015 report:\n\n1. **Parameters for Search Results**: The 2023 report explicitly states that the main parameters considered for ordering Apps in search results include the metadata provided by App Providers, customer engagement with the Apps and the App Store, and the popularity of the Apps in the App Store. This specific focus on these parameters for search result ranking is not mentioned in the 2015 report.\n\n2. **Relevance to Customer Search Queries**: The 2023 report emphasizes that these main parameters deliver the most relevant results to customer search queries, which is a specific statement not found in the 2015 report.\n\nThese points highlight a shift in focus towards the criteria used for search result rankings and the relevance of those results to customer queries in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. POPULAR NEAR ME",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THE MAC APP STORE, APP STORE AND IBOOKS STORE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. APP BUNDLES",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. APP STORE PRODUCT USAGE RULES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. ITUNES MATCH"
+    ],
+    "path": "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. SEARCH RESULTS AND RANKINGS"
+  },
+  "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. LICENSED APPLICATION END USER LICENSE AGREEMENT": {
+    "comparison": "Here are the changes identified between the 2023 and 2015 reports regarding the Licensed Application End User License Agreement:\n\n1. **Terminology Update**: In 2023, the term \"App Provider\" is used instead of \"Publisher\" as seen in 2015. This change reflects a shift in how third-party app developers are referred to in the agreement.\n\n2. **Licensor Definition**: In 2023, the term \"Licensor\" is defined as either the App Provider or Apple, whereas in 2015, it specifically referred to \"Publisher or iTunes.\" This change broadens the scope of who can be considered the Licensor.\n\n3. **License Granting Authority**: In 2023, it states that the license to any Apple App is granted by Apple, while the license to any Third Party App is granted by the App Provider. In 2015, it stated that the license to any Apple Product is granted by iTunes, and the license to any Third-Party Product is granted by the Publisher. This change indicates a shift from iTunes to Apple as the granting authority for Apple Apps.\n\n4. **Additional Terms Section**: The 2023 report includes specific sections labeled as \"ADDITIONAL TERMS FOR CONTENT ACQUIRED FROM THIRD PARTIES,\" \"ADDITIONAL APPLE MUSIC TERMS,\" \"ADDITIONAL APPLE FITNESS+ TERMS,\" and \"CARRIER MEMBERSHIP,\" which are not present in the 2015 report. This indicates an expansion of the terms to cover more specific services and content types.\n\n5. **Limitation of Liability Section**: The 2023 report has a section labeled \"Limitation of Liability\" that is not elaborated upon in the provided 2015 text. This suggests that there may be more detailed provisions regarding liability in the 2023 report.\n\nThese changes reflect updates in terminology, the structure of the agreement, and the inclusion of additional terms that were not present in the 2015 report.",
+    "sections": [
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. LICENSED APPLICATION END USER LICENCE AGREEMENT",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. LICENSE OF MAC APP STORE AND APP STORE PRODUCTS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "FURTHER IBOOKS STORE TERMS AND CONDITIONS ._. LICENSE OF IBOOKS STORE PRODUCTS"
+    ],
+    "path": "F. ADDITIONAL APP STORE TERMS (EXCLUDING APPLE ARCADE APPS) ._. LICENSED APPLICATION END USER LICENSE AGREEMENT"
+  },
+  "Apple Media Services Terms and Conditions ._. G. ADDITIONAL TERMS FOR CONTENT ACQUIRED FROM THIRD PARTIES": {
+    "comparison": "The following statements from the 2023 report are either new or significantly changed compared to the 2015 report:\n\n1. **Agent Role Clarification**: The 2023 report explicitly states that \"Apple acts as an agent for the Content provider in providing the Content to you, and therefore Apple is not a party to the Transaction between you and the Content provider.\" This specific clarification about Apple's role as an agent is not present in the 2015 report.\n\n2. **Merchant of Record**: The 2023 report mentions that \"if you are a customer of Apple Distribution International Ltd., Apple Distribution International Ltd. is the merchant of record for the Content you acquire.\" This specific mention of Apple Distribution International Ltd. as the merchant of record is not found in the 2015 report.\n\n3. **Content Provider's Rights**: The 2023 report states that \"The Content provider reserves the right to enforce the terms of use relating to such Content.\" While the 2015 report mentions that the Publisher reserves the right to enforce terms, the language and context in the 2023 report are more explicit regarding the Content provider's rights.\n\n4. **Responsibility for Content**: The 2023 report emphasizes that \"The Content provider is solely responsible for such Content, any warranties to the extent that such warranties have not been disclaimed, and any claims that you or any other party may have relating to such Content.\" This statement is more direct in attributing responsibility to the Content provider compared to the 2015 report.\n\nThese changes reflect a clearer delineation of roles and responsibilities between Apple, the Content providers, and the users in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. LICENSE OF MAC APP STORE AND APP STORE PRODUCTS",
+      "FURTHER IBOOKS STORE TERMS AND CONDITIONS ._. LICENSE OF IBOOKS STORE PRODUCTS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. INTELLECTUAL PROPERTY",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USE OF CONTENT",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS"
+    ],
+    "path": "Apple Media Services Terms and Conditions ._. G. ADDITIONAL TERMS FOR CONTENT ACQUIRED FROM THIRD PARTIES"
+  },
+  "Apple Media Services Terms and Conditions ._. H. ADDITIONAL APPLE MUSIC TERMS": {
+    "comparison": "Here are the statements from the 2023 report that were missing or significantly changed compared to the 2015 report:\n\n1. **iCloud Music Library Feature**: The 2023 report introduces the concept of \"iCloud Music Library\" as a feature that allows access to matched or uploaded songs, playlists, and music videos, which is not mentioned in the 2015 report.\n\n2. **Automatic Activation**: The 2023 report states that iCloud Music Library is turned on automatically when you set up your Apple Music membership, which is not addressed in the 2015 report.\n\n3. **Information Collection**: The 2023 report specifies that iCloud Music Library collects information about your iCloud Music Library Content and associates it with your Apple ID, which is not mentioned in the 2015 report.\n\n4. **Upload Limit**: The 2023 report allows users to upload up to 100,000 songs, whereas the 2015 report mentions a limit of 25,000 songs for iTunes Match.\n\n5. **Exemption for iTunes Store Purchases**: The 2023 report clarifies that songs acquired from the iTunes Store do not count against the upload limit, which is not specified in the 2015 report.\n\n6. **Logging of Usage Information**: The 2023 report includes a statement that Apple logs information such as tracks played, stopped, or skipped, and the devices used, which is not present in the 2015 report.\n\n7. **Backup Recommendation**: The 2023 report advises users to back up their data and information prior to using iCloud Music Library, which is not mentioned in the 2015 report.\n\n8. **Access Loss Upon Membership End**: The 2023 report states that when your Apple Music membership ends, you will lose access to your iCloud Music Library, including uploaded content, which is not addressed in the 2015 report.\n\nThese changes reflect a shift from iTunes Match to iCloud Music Library, with expanded features and terms in the 2023 report.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. ITUNES MATCH",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USAGE RULES",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. FAMILY SHARING",
+      "FURTHER IBOOKS STORE TERMS AND CONDITIONS ._. IBOOKS STORE PRODUCT USAGE RULES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CHANGES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CHANGES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES"
+    ],
+    "path": "Apple Media Services Terms and Conditions ._. H. ADDITIONAL APPLE MUSIC TERMS"
+  },
+  "Apple Media Services Terms and Conditions ._. I. ADDITIONAL APPLE FITNESS+ TERMS": {
+    "comparison": "The 2023 report includes the following statements that are not present in the 2015 report:\n\n1. **Purpose of Apple Fitness+**: The 2023 report explicitly states that \"Apple Fitness+ is for entertainment and/or informational purposes only and is not intended to provide any medical advice.\" This specific disclaimer regarding the purpose of Apple Fitness+ is not found in the 2015 report.\n\n2. **Advice from Healthcare Professionals**: The 2023 report emphasizes the importance of seeking advice from a qualified healthcare professional regarding the safety and advisability of activities and specific medical conditions or symptoms. This guidance is not mentioned in the 2015 report.\n\nThese additions in the 2023 report highlight a clearer distinction regarding the intended use of Apple Fitness+ and the importance of consulting healthcare professionals, which were not addressed in the 2015 report.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USE OF CONTENT",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CHANGES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CHANGES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. PRIVACY"
+    ],
+    "path": "Apple Media Services Terms and Conditions ._. I. ADDITIONAL APPLE FITNESS+ TERMS"
+  },
+  "Apple Media Services Terms and Conditions ._. J. CARRIER MEMBERSHIP": {
+    "comparison": "The following statements from the 2023 report are either new or significantly changed compared to the 2015 report:\n\n1. **Carrier Membership Definition**: The 2023 report introduces the concept of \"Carrier Membership,\" which is not present in the 2015 report. It specifies that users may purchase a Service membership from their wireless carrier.\n\n2. **Merchant of Record**: The 2023 report states that if a Carrier Membership is purchased, the carrier is the \"merchant of record,\" indicating that the service license is acquired from the carrier, which will bill the user for the membership. This specific relationship is not mentioned in the 2015 report.\n\n3. **Billing Disputes**: The 2023 report explicitly states that any billing disputes related to a Carrier Membership must be directed to the carrier, not Apple. This delineation of responsibility is not present in the 2015 report.\n\n4. **Information Exchange**: The 2023 report includes a provision that by using a Service through a Carrier Membership, users agree that their carrier may exchange their account information, telephone number, and subscription information with Apple. This specific agreement regarding information exchange is not found in the 2015 report.\n\n5. **Apple's Role**: The 2023 report clarifies that while the carrier bills for the cost of the Service membership, the Service is licensed and provided by Apple. This distinction is not made in the 2015 report.\n\nThese changes reflect a shift in how Apple defines the relationship between users, carriers, and Apple itself regarding service memberships.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. IN-APP SUBSCRIPTIONS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. LICENSE OF MAC APP STORE AND APP STORE PRODUCTS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USE OF CONTENT",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. ELECTRONIC CONTRACTING",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. FAMILY SHARING",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. MISCELLANEOUS"
+    ],
+    "path": "Apple Media Services Terms and Conditions ._. J. CARRIER MEMBERSHIP"
+  },
+  "Apple Media Services Terms and Conditions ._. K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES": {
+    "comparison": "None.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES"
+    ],
+    "path": "Apple Media Services Terms and Conditions ._. K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. DEFINITION OF APPLE": {
+    "comparison": "None.",
+    "sections": [
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THE MAC APP STORE, APP STORE AND IBOOKS STORE",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. DEFINITION OF APPLE"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. CONTRACT CHANGES": {
+    "comparison": "The following changes can be identified between the 2023 and 2015 reports regarding the section on contract changes:\n\n1. **Change of Entity Name**: In the 2015 report, the entity referred to is \"iTunes,\" whereas in the 2023 report, it is \"Apple.\" This indicates a shift in branding or organizational structure.\n\n2. **Terminology**: The 2015 report refers to \"the Stores,\" while the 2023 report refers to \"the Services.\" This change in terminology may reflect a broader scope of services offered by Apple compared to the specific stores mentioned in 2015.\n\n3. **Termination Clause**: In the 2023 report, it states, \"Apple will have the right to terminate the Agreement\" if the user refuses to accept changes. In the 2015 report, it states, \"iTunes will have the right to terminate the Agreement.\" While the essence remains the same, the change in entity name is notable.\n\nOverall, the primary changes are the shift from \"iTunes\" to \"Apple\" and from \"the Stores\" to \"the Services.\"",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CHANGES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CHANGES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. ELECTRONIC CONTRACTING",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. CONTRACT CHANGES"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. THIRD-PARTY MATERIALS": {
+    "comparison": "The following statements from the 2015 report are significantly different or missing in the 2023 report:\n\n1. **Inclusion of \"Certain content, Products, and services available via the Stores may include materials from third parties.\"** - This specific phrasing is not present in the 2023 report.\n\n2. **Mention of \"iTunes may provide links to third-party websites as a convenience to you.\"** - This statement is absent in the 2023 report.\n\n3. **The user agreement regarding not using third-party materials in a manner that would infringe or violate the rights of any other party.** - This specific user agreement is not included in the 2023 report.\n\n4. **The phrase \"iTunes does not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third parties.\"** - This detailed disclaimer is not present in the 2023 report.\n\n5. **The statement about the user's agreement to not use third-party materials in a manner that would infringe or violate the rights of any other party.** - This is also missing in the 2023 report.\n\nOverall, the 2023 report is more concise and lacks the detailed disclaimers and user agreements present in the 2015 report regarding third-party materials.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. SUBMISSIONS TO THE STORES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. OBJECTIONABLE MATERIAL",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. INTELLECTUAL PROPERTY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. THIRD-PARTY MATERIALS"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. INTELLECTUAL PROPERTY": {
+    "comparison": "Here are the statements from the 2023 report that were missing or significantly changed in the 2015 report:\n\n1. **Terminology Change**: The term \"Services\" is used in the 2023 report, whereas \"Stores\" is used in the 2015 report. This indicates a shift in how Apple refers to its offerings.\n\n2. **Content Ownership**: In the 2023 report, it specifies that the proprietary information and material are owned by \"Apple, its licensors and/or Content providers,\" whereas the 2015 report refers to ownership by \"iTunes and/or the Publishers.\" This change reflects a broader ownership structure in the 2023 report.\n\n3. **Prohibition on Exploitation**: The 2023 report explicitly states that users shall not exploit the Services in any manner not expressly authorized, which is not mentioned in the 2015 report.\n\n4. **Trademarks**: The 2023 report includes a more extensive list of Apple trademarks and service marks, such as \"Apple Music,\" \"Apple TV+,\" \"Apple Arcade,\" and \"Apple Fitness+,\" which were not mentioned in the 2015 report.\n\n5. **No Liability for Changes**: The 2023 report does not include a provision similar to the one in the 2015 report that states iTunes reserves the right to change, suspend, remove, or disable access to any Products without notice. This indicates a potential shift in liability or responsibility regarding changes to the Services.\n\n6. **Modification of Content**: The 2023 report does not mention the ability of Apple to impose limits on the use of or access to certain features or portions of the Services, which is present in the 2015 report.\n\nThese changes reflect a shift in terminology, ownership structure, and the scope of user rights and responsibilities between the two reports.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. INTELLECTUAL PROPERTY",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USE OF CONTENT",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. THE ITUNES STORE SERVICE",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. SUBMISSIONS TO THE STORES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. USE OF PRODUCTS AND THE STORES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CONTENT SECURITY"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. INTELLECTUAL PROPERTY"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. COPYRIGHT": {
+    "comparison": "The following statements from the 2023 report are either new or significantly changed compared to the 2015 report:\n\n1. **Copyright Ownership**: The 2023 report explicitly states that \"Services and Content provided by Apple are copyrights of Apple Inc. and its subsidiaries,\" which is not present in the 2015 report.\n\n2. **Notification of Claimed Infringement**: The 2023 report provides specific URLs for different services (e.g., Third Party Apps, Apple Books, Apple TV+, etc.) for users to report copyright infringement, which is a new addition. The 2015 report does not include such specific links or a structured approach for reporting.\n\n3. **Processing Notifications**: The 2023 report mentions that the provided URLs are \"the fastest way for us to process your notification of claimed infringement,\" indicating a focus on efficiency in handling such claims, which is not addressed in the 2015 report.\n\n4. **Slower Method for Notification**: The 2023 report refers to a \"slower method\" to reach the designated agent for processing notifications, which is a new concept not mentioned in the 2015 report.\n\nThese changes reflect a more structured and user-friendly approach to copyright issues in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. INTELLECTUAL PROPERTY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. SUBMISSIONS TO THE STORES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE AND APP STORE PRODUCT MAINTENANCE AND SUPPORT",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. USE OF CONTENT",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CONTENT SECURITY",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. COPYRIGHT"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. TERMINATION AND SUSPENSION OF SERVICES": {
+    "comparison": "Here are the changes between the 2023 and 2015 reports regarding the termination and suspension of services:\n\n1. **Terminology Change**: In 2015, the term \"iTunes\" was used, while in 2023, it has been changed to \"Apple\" and \"Apple ID.\"\n\n2. **Suspicion Clause**: In 2015, it states \"iTunes has strong grounds to believe that you have failed,\" whereas in 2023, it simply states \"Apple suspects that you have failed.\"\n\n3. **License Termination**: In 2015, it mentions \"cause the license to the software to be terminated,\" while in 2023, it states \"terminate your license to the software.\"\n\n4. **Access to Services**: In 2015, it refers to \"preclude access to the Stores,\" while in 2023, it states \"preclude your access to the Services.\"\n\n5. **Content vs. Products**: In 2015, it mentions \"Products that you have already acquired,\" while in 2023, it refers to \"Content that you have already acquired.\"\n\n6. **Authorization of Additional Computers**: In 2015, it states \"you may be unable to authorise additional computers to use the Products,\" while in 2023, it states \"you may be unable to authorize additional computers to use the Content.\"\n\n7. **Notice of Changes**: In 2023, it includes a statement that \"Apple further reserves the right to modify, suspend or discontinue the Services (or any part or Content thereof) at any time with or without notice to you,\" which is not explicitly stated in the 2015 report.\n\nThese changes reflect a shift in terminology and some clarifications in the language used regarding the termination and suspension of services.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CHANGES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CHANGES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. STORE SECURITY",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. TERMINATION AND SUSPENSION OF SERVICES"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS": {
+    "comparison": "Here are the changes from the 2015 report to the 2023 report regarding the \"DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS\" section:\n\n1. **Terminology Change**: The term \"iTunes\" used in the 2015 report has been replaced with \"Apple\" in the 2023 report.\n\n2. **Content Availability Clause**: \n   - In the 2023 report, it explicitly states that \"Apple has no responsibility to continue making Content available to you through our Services,\" which is not present in the 2015 report.\n\n3. **Liability Limitations**: \n   - The 2023 report includes a specific clause (section c) that outlines various conditions under which Apple and its affiliates are not liable for loss or damage, which is more detailed compared to the 2015 report.\n\n4. **Data Charges Disclaimer**: \n   - The 2023 report includes a new clause (section g) stating that \"APPLE IS NOT RESPONSIBLE FOR DATA CHARGES YOU MAY INCUR IN CONNECTION WITH YOUR USE OF THE SERVICES,\" which is absent in the 2015 report.\n\n5. **Force Majeure Events**: \n   - The 2023 report specifies that security intrusions are considered events of Force Majeure, which is not explicitly stated in the 2015 report.\n\nThese changes reflect a shift in language, additional disclaimers regarding content availability, and a more detailed outline of liability limitations in the 2023 report compared to the 2015 report.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. THIRD-PARTY MATERIALS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. STORE SECURITY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. OBJECTIONABLE MATERIAL",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. INTELLECTUAL PROPERTY"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. STATUTORY EXCEPTIONS FOR PUBLIC INSTITUTIONS": {
+    "comparison": "The following statements from the 2023 report are either missing or significantly changed compared to the 2015 report:\n\n1. **Specific Reference to Public Institutions**: The 2023 report explicitly mentions \"qualified public educational or government institution,\" which is not referenced in the 2015 report. This indicates a specific consideration for public institutions in the context of the agreement.\n\n2. **Indemnification Section**: The 2023 report specifically cites the \"indemnification section\" as an example of a part of the agreement that may be invalid or unenforceable against public institutions. This specific reference is not present in the 2015 report.\n\n3. **Construction of Invalid or Unenforceable Portions**: The language in the 2023 report states that if any part of the agreement is invalid or unenforceable, it shall be \"deemed invalid or unenforceable, as the case may be, and instead construed in a manner most consistent with applicable governing law.\" This is a more explicit and structured approach compared to the 2015 report, which states that the portion shall be construed in a manner consistent with applicable law to reflect the original intentions of the parties.\n\nThese changes reflect a more tailored approach in the 2023 report regarding public institutions and the handling of invalid or unenforceable provisions.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. PRIVACY"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. STATUTORY EXCEPTIONS FOR PUBLIC INSTITUTIONS"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. GOVERNING LAW": {
+    "comparison": "The following statements from the 2023 report are either new or significantly changed compared to the 2015 report:\n\n1. **Governing Law**: The 2023 report specifies that the governing law for the Agreement is the laws of the State of California, excluding its conflicts of law provisions. In contrast, the 2015 report states that the Agreement and the use of the Stores is governed by English law.\n\n2. **Jurisdiction**: The 2023 report establishes that you and Apple agree to submit to the personal and exclusive jurisdiction of the courts located within the county of Santa Clara, California. The 2015 report does not mention any specific jurisdiction related to California or Santa Clara.\n\n3. **Non-U.S. Citizens**: The 2023 report includes a specific clause for non-U.S. citizens, detailing that if certain conditions are met (not being a U.S. citizen, not residing in the U.S., etc.), the governing law and forum will be based on the user's usual place of residence in specific countries. This clause is absent in the 2015 report.\n\n4. **Exclusion of the United Nations Convention**: The 2023 report explicitly states that the United Nations Convention on the International Sale of Goods is specifically excluded from application to this Agreement. This exclusion is not mentioned in the 2015 report.\n\nThese changes reflect a shift in the governing legal framework and jurisdictional stipulations from the 2015 report to the 2023 report.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. ELECTRONIC CONTRACTING",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CONTENT SECURITY"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. GOVERNING LAW"
+  },
+  "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. OTHER PROVISIONS": {
+    "comparison": "Here are the changes identified between the 2023 and 2015 Terms and Conditions reports:\n\n1. **Parties Involved**: In 2015, the agreement was between the user and \"iTunes,\" while in 2023, it is between the user and \"Apple.\"\n\n2. **Terminology**: The term \"Services\" is used in 2023 to refer to the offerings, whereas in 2015, the term \"Stores\" is used.\n\n3. **Governing Law**: In 2015, it specifies that the agreement and use of the Stores is governed by English law. This specific mention of governing law is absent in the 2023 report.\n\n4. **Notification Method**: In 2023, Apple may notify users via email, postal mail, or posting on the Services. In 2015, notifications were specifically sent to the \"Account email address\" or \"Account mailing address,\" which is not mentioned in the 2023 report.\n\n5. **Risk of Loss**: The 2023 report includes a statement about the risk of loss for electronically delivered Transactions passing to the acquirer upon electronic transmission to the recipient, which is not present in the 2015 report.\n\n6. **Authority to Vary Agreement**: The 2023 report explicitly states that no Apple employee or agent has the authority to vary the Agreement, which is not mentioned in the 2015 report.\n\n7. **Data Disclosure**: The 2023 report specifies that Apple has the right to disclose any data and/or information to law enforcement authorities, government officials, and/or a third party, which is framed in a broader context compared to the 2015 report.\n\nThese points highlight the significant changes and updates made in the 2023 Terms and Conditions compared to the 2015 version.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. MISCELLANEOUS",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. CHANGES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CHANGES",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. TERMINATION",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. DISCLAIMER OF WARRANTIES; LIABILITY LIMITATIONS",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. PRIVACY",
+      "FURTHER MAC APP STORE AND APP STORE TERMS AND CONDITIONS ._. MAC APP STORE PRODUCT USAGE RULES"
+    ],
+    "path": "K. MISCELLANEOUS TERMS APPLICABLE TO ALL SERVICES ._. OTHER PROVISIONS"
+  },
+  "Apple Media Services Terms and Conditions ._. Last Updated: 12 September 2022": {
+    "comparison": "None.",
+    "sections": [
+      "C. MAC APP STORE, APP STORE AND IBOOKS STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE STORES",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. REQUIREMENTS FOR USE OF THE SERVICE",
+      "B. ITUNES STORE TERMS AND CONDITIONS ._. CONTENT AVAILABILITY",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. PAYMENTS, TAXES, AND REFUND POLICY",
+      "A. ITUNES STORE, MAC APP STORE, APP STORE AND IBOOKS STORE TERMS OF SALE ._. 1-Click\u00ae"
+    ],
+    "path": "Apple Media Services Terms and Conditions ._. Last Updated: 12 September 2022"
+  }
+}
