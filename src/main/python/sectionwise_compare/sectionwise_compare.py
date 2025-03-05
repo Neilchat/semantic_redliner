@@ -75,8 +75,13 @@ class SectionWiseCompare(BaseStrategy):
         completion_parameters = {"model": self.config.openai_model_name,
                                  "messages": [{"role": "system",
                                                "content": "You are an advanced NLP system specialized in legal analysis. The user will provide you with the differences in two versions of an Apple Terms and Conditions report. "
-                                                          "Your job is to give a coherent summary of the differences. "
-                                                          "Explain all the difference and pay particular attention in elaborating how the legal significance and impact of these."},
+                                                          "Your job is to give a detailed summary of the differences. "
+                                                          "Explain all the difference and pay particular attention in elaborating how the legal significance and impact of these."
+                                                          "Structure you response as a markdown table. The table should have 4 collumns as follows:\n"
+                                                          "- Topic: What the difference is about. If it is about a specific product, mention it.\n"
+                                                          "- 2023 Report: What the 2023 report says about a point of difference regarding the topic. If the report says nothing about it entry should be 'Not mentioned'\n"
+                                                          "- 2015 Report: What the 2015 report says about a point of difference regarding the topic. If the report says nothing about it entry should be 'Not mentioned'\n"
+                                                          "- Impact and Significance: What the impact of this difference is in legal terms."},
                                               {"role": "user",
                                                "content": prompt}],
                                  "temperature": 0.0}
@@ -151,5 +156,9 @@ class SectionWiseCompare(BaseStrategy):
                     json.dump(comparisons2015, f, indent=2)
 
         ans = self.merge_results(comparisons2023, comparisons2015)
+        with open("/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/sectionWise_compare.txt",
+                  'w') as f:
+            f.write(ans)
+
         print(ans)
 
