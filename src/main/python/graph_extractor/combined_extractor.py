@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 from graph_extractor.llm_graph_extractor import GraphExtractor, Entity
 from graph_extractor.llmsherpa_extractor import get_structure
-from models.strategy_config import StrategyConfig
+from strategies.base.strategy_config import StrategyConfig
 from text_extraction.tika_parser import TikaParser
 
 

@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from models.strategy_config import StrategyConfig
+from strategies.base.strategy_config import StrategyConfig
 
 
 class BaseStrategy(ABC):

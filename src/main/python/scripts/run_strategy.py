@@ -1,9 +1,9 @@
-from models.auto import AutoStrategy
-from models.strategy_config import StrategyConfig
+from strategies.base.auto import AutoStrategy
+from strategies.base.strategy_config import StrategyConfig
 
 if __name__ == "__main__":
     config = StrategyConfig("",
-                            "https://api.openai.com",
+                            "",
                             "",
                             "gpt-4o-mini",
                             "text-embedding-ada-002")

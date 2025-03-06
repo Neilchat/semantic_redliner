@@ -7,9 +7,9 @@ from langchain_qdrant import QdrantVectorStore
 from rouge_score import rouge_scorer
 from openai import OpenAI
 from graph_extractor.combined_extractor import CombinedExtractor
-from models.base_strategy import BaseStrategy
-from models.strategy_config import StrategyConfig
-from sectionwise_compare.prompt_store import section_compare_system_prompt, section_compare_user_prompt
+from strategies.base.base_strategy import BaseStrategy
+from strategies.base.strategy_config import StrategyConfig
+from strategies.sectionwise_compare.prompt_store import section_compare_system_prompt, section_compare_user_prompt
 from text_extraction.tika_parser import TikaParser
 
 
@@ -72,15 +72,13 @@ class SectionWiseCompare(BaseStrategy):
             if not comparisons2015[key]["comparison"] == "None.":
                 prompt += f"For the section {comparisons2015[key]['path']} the differences were:\n {comparisons2015[key]['comparison']}"
         prompt += "\n\n................\n\n Please provide me with a summary of all the differnces stated above, focusing on their significance and impact."
-        completion_parameters = {"model": self.config.openai_model_name,
+        completion_parameters = {"model": "gpt-4o-mini",
                                  "messages": [{"role": "system",
                                                "content": "You are an advanced NLP system specialized in legal analysis. The user will provide you with the differences in two versions of an Apple Terms and Conditions report. "
-                                                          "Your job is to give a detailed summary of the differences. "
-                                                          "Explain all the difference and pay particular attention in elaborating how the legal significance and impact of these."
+                                                          "Your job is to give a detailed summary of the differences. For each section undertand the stated differences and highlight the most significant ones, mentioning the accompanying section"
                                                           "Structure you response as a markdown table. The table should have 4 collumns as follows:\n"
-                                                          "- Topic: What the difference is about. If it is about a specific product, mention it.\n"
-                                                          "- 2023 Report: What the 2023 report says about a point of difference regarding the topic. If the report says nothing about it entry should be 'Not mentioned'\n"
-                                                          "- 2015 Report: What the 2015 report says about a point of difference regarding the topic. If the report says nothing about it entry should be 'Not mentioned'\n"
+                                                          "- 2023 Report: What the 2023 report says about a point of difference. If the report says nothing about it entry should be 'Not mentioned'\n"
+                                                          "- 2015 Report: What the 2015 report says about a point of difference. If the report says nothing about it entry should be 'Not mentioned'\n"
                                                           "- Impact and Significance: What the impact of this difference is in legal terms."},
                                               {"role": "user",
                                                "content": prompt}],

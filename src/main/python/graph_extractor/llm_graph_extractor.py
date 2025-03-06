@@ -1,5 +1,4 @@
 import json
-import re
 from enum import Enum
 from pathlib import Path
 from typing import List
@@ -7,8 +6,7 @@ from typing import List
 from openai import OpenAI
 from pydantic import BaseModel
 
-from models.strategy_config import StrategyConfig
-from text_extraction.tika_parser import TikaParser
+from strategies.base.strategy_config import StrategyConfig
 
 
 class EdgeType(str, Enum):
