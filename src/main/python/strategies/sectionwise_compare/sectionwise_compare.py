@@ -145,5 +145,5 @@ class SectionWiseCompare(BaseStrategy):
                   'w') as f:
             f.write(ans)
 
-        print(ans)
+        return ans
 

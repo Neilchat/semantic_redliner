@@ -27,7 +27,7 @@ if __name__ == "__main__":
     results_file = "naive_compare.txt"
 
     # results_file = "agenticComparePolicy.txt"
-    # results_file = "agenticCompareProducts.txt"
+    # results_file = "agenticCompareProduct.txt"
 
     # results_file = "sectionWise_compare.txt"
 
