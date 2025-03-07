@@ -22,26 +22,28 @@ class Evaluator:
             retrieval_context=context
         )
 
-        return metric.measure(test_case)
+        return metric.measure(test_case), metric.reason
 
     def answer_relevancy_metric(self, answer, question):
         metric = AnswerRelevancyMetric(
             threshold=0.7,
-            model="gpt-4o-mini",
-            include_reason=True
+            model=self.model,
+            include_reason=True,
+            async_mode=False
         )
         test_case = LLMTestCase(
             input=question,
             actual_output=answer
         )
 
-        return metric.measure(test_case)
+        return metric.measure(test_case), metric.reason
 
     def summarization_metric(self, question, answer):
         test_case = LLMTestCase(input=question, actual_output=answer)
         metric = SummarizationMetric(
             threshold=0.5,
-            model="gpt-4o-mini",
+            model=self.model,
+            async_mode=False
         )
 
-        return metric.measure(test_case)
+        return metric.measure(test_case), metric.reason
