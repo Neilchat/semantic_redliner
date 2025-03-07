@@ -93,20 +93,19 @@ Please help me decompose the following piece of text into a graph using the stru
                                  "temperature": 0.0,
                                  "response_format": Graph}
 
-        my_file = Path(f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/graph_{year}.json")
+        graph_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/graph_{year}.json"
+        my_file = Path(graph_path)
         if my_file.is_file():
-            with open(f'/Users/saswata/Documents/semantic_redliner/src/main/python/data/graph_{year}.json') as f:
+            with open(graph_path) as f:
                 graph_json = json.load(f)
             graph = Graph(**graph_json)
 
         else:
             graph = self.llm.beta.chat.completions.parse(**completion_parameters).choices[0].message.parsed
-            print(graph)
-
 
             dict = graph.dict()
             json_data = json.dumps(dict)
-            with open(f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/graph_{year}.json", "w") as file:
+            with open(graph_path, "w") as file:
                 file.write(json_data)
 
         return graph

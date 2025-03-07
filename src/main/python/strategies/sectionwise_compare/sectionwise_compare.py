@@ -9,9 +9,9 @@ from openai import OpenAI
 from graph_extractor.combined_extractor import CombinedExtractor
 from strategies.base.base_strategy import BaseStrategy
 from strategies.base.strategy_config import StrategyConfig
-from strategies.sectionwise_compare.prompt_store import section_compare_system_prompt, section_compare_user_prompt
+from strategies.sectionwise_compare.prompt_store import section_compare_system_prompt, section_compare_user_prompt, \
+    merge_results_system_prompt
 from text_extraction.tika_parser import TikaParser
-
 
 class SectionWiseCompare(BaseStrategy):
     def __init__(self, config: StrategyConfig):
@@ -59,7 +59,6 @@ class SectionWiseCompare(BaseStrategy):
                                  "temperature": 0.0}
 
         ans = self.llm.chat.completions.create(**completion_parameters)
-        # print(ans.choices[0].message.content)
         return ans.choices[0].message.content
 
     def merge_results(self, comparisons2023, comparisons2015):
@@ -74,17 +73,11 @@ class SectionWiseCompare(BaseStrategy):
         prompt += "\n\n................\n\n Please provide me with a summary of all the differnces stated above, focusing on their significance and impact."
         completion_parameters = {"model": "gpt-4o-mini",
                                  "messages": [{"role": "system",
-                                               "content": "You are an advanced NLP system specialized in legal analysis. The user will provide you with the differences in two versions of an Apple Terms and Conditions report. "
-                                                          "Your job is to give a detailed summary of the differences. For each section undertand the stated differences and highlight the most significant ones, mentioning the accompanying section"
-                                                          "Structure you response as a markdown table. The table should have 4 collumns as follows:\n"
-                                                          "- 2023 Report: What the 2023 report says about a point of difference. If the report says nothing about it entry should be 'Not mentioned'\n"
-                                                          "- 2015 Report: What the 2015 report says about a point of difference. If the report says nothing about it entry should be 'Not mentioned'\n"
-                                                          "- Impact and Significance: What the impact of this difference is in legal terms."},
+                                               "content": merge_results_system_prompt},
                                               {"role": "user",
                                                "content": prompt}],
                                  "temperature": 0.0}
         ans = self.llm.chat.completions.create(**completion_parameters)
-        # print(ans.choices[0].message.content)
         return ans.choices[0].message.content
 
 
@@ -94,10 +87,11 @@ class SectionWiseCompare(BaseStrategy):
         contents2015, graph2015 = extractor.get_datapoints(docpath1, "2015")
         contents2023, graph2023 = extractor.get_datapoints(docpath2, "2023")
 
+        section_2023_path = "/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2023.json"
         comparisons2023 = {}
-        my_file = Path(f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2023.json")
+        my_file = Path(section_2023_path)
         if my_file.is_file():
-            with open(f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2023.json") as f:
+            with open(section_2023_path) as f:
                 comparisons2023 = json.load(f)
         else:
             vectorstore2015 = QdrantVectorStore.from_documents(
@@ -108,7 +102,6 @@ class SectionWiseCompare(BaseStrategy):
             )
             for sec2023 in contents2023:
                 relevant_sections = self.get_related_sections(sec2023, vectorstore2015)
-                # print(relevant_sections)
                 comparison = self.compare_a_section(sec2023, relevant_sections, "2023", "2015")
                 compares={"comparison": comparison,
                          "sections": list(relevant_sections.keys()),
@@ -117,17 +110,14 @@ class SectionWiseCompare(BaseStrategy):
                 comparisons2023[sec2023.path] = compares
                 print(compares)
 
-                with open("/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2023.json", 'w') as f:
-                    # indent=2 is not needed but makes the file human-readable
-                    # if the data is nested
+                with open(section_2023_path, 'w') as f:
                     json.dump(comparisons2023, f, indent=2)
 
+        section_2015_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2015.json"
         comparisons2015 = {}
-        my_file = Path(
-            f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2015.json")
+        my_file = Path(section_2015_path)
         if my_file.is_file():
-            with open(
-                    f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2015.json") as f:
+            with open(section_2015_path) as f:
                 comparisons2015 = json.load(f)
         else:
             for sec2015 in contents2015:
@@ -138,7 +128,6 @@ class SectionWiseCompare(BaseStrategy):
                     collection_name="2023"
                 )
                 relevant_sections = self.get_related_sections(sec2015, vectorstore2023)
-                # print(relevant_sections)
                 comparison = self.compare_a_section(sec2015, relevant_sections, "2015", "2023")
                 compares = \
                     {"comparison": comparison,
@@ -148,9 +137,7 @@ class SectionWiseCompare(BaseStrategy):
                 comparisons2015[sec2015.path] = compares
                 print(compares)
 
-                with open("/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2015.json", 'w') as f:
-                    # indent=2 is not needed but makes the file human-readable
-                    # if the data is nested
+                with open(section_2015_path, 'w') as f:
                     json.dump(comparisons2015, f, indent=2)
 
         ans = self.merge_results(comparisons2023, comparisons2015)

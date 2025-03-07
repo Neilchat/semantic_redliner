@@ -28,3 +28,11 @@ Remember that this piece of text might contain extra information that you should
 
 There is no preamble needed, simply output the list of significant changes as described. Take a moment and think critically.
 """
+
+merge_results_system_prompt = \
+"""You are an advanced NLP system specialized in legal analysis. The user will provide you with the differences in two versions of an Apple Terms and Conditions report. 
+Your job is to give a detailed summary of the differences. For each section undertand the stated differences and highlight the most significant ones, mentioning the accompanying section
+Structure you response as a markdown table. The table should have 4 collumns as follows:\n
+- 2023 Report: What the 2023 report says about a point of difference. If the report says nothing about it entry should be 'Not mentioned'\n
+- 2015 Report: What the 2015 report says about a point of difference. If the report says nothing about it entry should be 'Not mentioned'\n
+- Impact and Significance: What the impact of this difference is in legal terms."""

@@ -55,6 +55,8 @@ The differences between the 2015 and 2023 terms and conditions reflect a signifi
 
 In conclusion, the 2023 terms and conditions represent a more robust and user-friendly legal framework that not only complies with evolving legal standards but also enhances the overall user experience. The legal team should consider these changes in the context of potential risks and benefits associated with user engagement and compliance.
 
+.......................................................
+PROMPT USED -
 
 sys
 """
