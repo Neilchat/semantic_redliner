@@ -24,13 +24,19 @@ if __name__ == "__main__":
     {text1}
     """]
 
-    results_file = "sectionWise_compare.txt"
+    results_file = "naive_compare.txt"
+
+    # results_file = "agenticComparePolicy.txt"
+    # results_file = "agenticCompareProducts.txt"
+
+    # results_file = "sectionWise_compare.txt"
+
     with open(f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/{results_file}", "r") as f:
         answer = f.read()
 
-    relevancy = evaluator.answer_relevancy_metric(answer=answer, question=question)
-    # faithfulness = evaluator.faithfulness_metric(answer=answer, context=context, question=question)
+    # relevancy = evaluator.answer_relevancy_metric(answer=answer, question=question)
+    faithfulness = evaluator.faithfulness_metric(answer=answer, context=context, question=question)
 
-    print("relevancy", relevancy)
-    # print("faithfulness", faithfulness)
+    # print("relevancy", relevancy)
+    print("faithfulness", faithfulness)
 
