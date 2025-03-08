@@ -17,7 +17,10 @@ Better entity extraction is needed
 
 
 Governing law insight.
+
 Popular Near Me	Privacy and User Control	Users are informed that they can opt out of data collection by disabling Location Services or turning off “Popular Near Me.”	Implies a more generalized approach to user data and privacy, focusing on how apps are ranked and displayed.	May enhance user trust but could limit personalization that users previously experienced.
+
+Ask to Buy comes up in section compare not in agent compare. Why? It is in family sharing just doesn't come up in diff, the 13 year age cut off does though.
 
 ##Quantitative Comparisons
 Faithfulness scores-

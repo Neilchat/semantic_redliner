@@ -14,9 +14,9 @@ def camel_to_snakecase(name):
 
 if __name__ == "__main__":
 
-    # strategy_key = "naiveCompare"
+    strategy_key = "naiveCompare"
     # strategy_key = "sectionWiseCompare"
-    strategy_key = "agenticCompare"
+    # strategy_key = "agenticCompare"
 
     # strategy_key = "naiveStructureSuggest"
 
