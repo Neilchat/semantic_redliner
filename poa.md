@@ -42,3 +42,7 @@ Why this isn't working well?
   - Repeat for Policy
   - Create final report
 
+##Evals
+- qualitative
+- deepeval faithfulness
+- rubric with geval expected score WIP
