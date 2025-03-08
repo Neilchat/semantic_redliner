@@ -45,7 +45,7 @@ class GraphExtractor:
         self.llm = OpenAI(api_key=config.openai_api_key)
         self.config = config
 
-    def get_or_create_graph(self, text, year):
+    def get_or_create_graph(self, text, year, results_folder):
         system_prompt = \
 """
 You are an advanced NLP system specialized in understanding Legal documents. Your job is to decompose the document the User supplies into a Graph. 
@@ -93,7 +93,7 @@ Please help me decompose the following piece of text into a graph using the stru
                                  "temperature": 0.0,
                                  "response_format": Graph}
 
-        graph_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/graph_{year}.json"
+        graph_path = f"{results_folder}/graph_{year}.json"
         my_file = Path(graph_path)
         if my_file.is_file():
             with open(graph_path) as f:

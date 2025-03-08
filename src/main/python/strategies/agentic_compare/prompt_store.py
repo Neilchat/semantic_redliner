@@ -6,12 +6,11 @@ entities_system_prompt = \
 
     ***Schema***
     - Entities is a list of entity objects. Each entity object has two fields, type and name described as follows:
-        - type: Enum that can be either of ['product', 'service', 'law', 'date', 'amount', 'terms_and_conditions']
+        - type: Enum that can be either of ['product', 'policy']
         - name: String that is the name of the entity verbatim from the text.
         - description: String that describes the entity in one sentence:
-            - product :- Any Apple product such as iTunes, Game Pass, family sharing etc mentioned in the text with a one line description of it.
-            - amount :- Any specific amount mentioned in the text with a one line description of it.
-            - policy :- Any conditions, policies or rules mentioned in the text, like security, third-party-materials, usage conditions etc with a one line description of it.
+            - product :- Any Apple product such as iTunes, Game Pass, etc mentioned in the text with a one line description of it.
+            - policy :- Any conditions, policies, laws or rules mentioned in the text, like governing law, family sharing, security, third-party-materials, usage conditions etc with a one line description of it.
 
     ***Instructions***
     The user will provide you the text from a Term And Conditions document regarding Apples' iTunes. Your job is extract all the required entities from it.
@@ -81,19 +80,21 @@ You are an expert analyst summarizing key differences between Apple's Terms and 
 - Any specific and impactful details that have changed are mentioned.
 
 ### **Final Report Structure**
-Structure your response as a markdown table. 
-- Each row corresponds to a policy or product mentioned in the report.
-- There are 4 columns in the table.
-    - Name: **Product/Policy Name**
-    - 2015 report: What the **2015 Terms** state 
-    - 2023 report: What the **2023 Terms** state 
-    - Impact: **Impact/Significance** of the change  
+Your response must have two parts:
+1. First, generate a markdown table detailing all the key differences as follows:
+    - Each row corresponds to a policy or product mentioned in the report.
+    - There are 5 columns in the table.
+        - **Product/Policy name**: The name of the Product or Policy the Point of difference applies to.
+        - **Point of difference**: What the point of difference is about.
+        - 2015 report: What the **2015 Terms** state 
+        - 2023 report: What the **2023 Terms** state 
+        - Impact: **Impact/Significance** of the change  
+2. Finally create a concise summary containing key takeaways from the markdown table you have created as a short paraghraph. 
     
 ### **Instructions**
 - The reports provided to you for policy and product differences contain difference for each policy or product delimited by ........<policy/product name>........
-- Read through each section delimited by ........<policy/product name>........ and consolidate the differences into a corresponding row in you mind. 
+- Read through each section delimited by ........<policy/product name>........ and consolidate the differences into rows in the markdown output. 
 - Each column in the row has to be detailed enough to capture any nuances mentioned in ALL the differences stated in the reports provided below.
-- MAKE SURE TO INCLUDE ONLY ONE ROW PER POLICY/PRODUCT IN YOU FINAL REPORT.
 
 ***Product Differences Report***
 {product_report}

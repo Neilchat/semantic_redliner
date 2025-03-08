@@ -7,5 +7,3 @@ def get_structure(path):
     doc = pdf_reader.read_pdf(path)
     return doc
 
-if __name__ == "__main__":
-    get_structure("/Users/saswata/Documents/semantic_redliner/src/main/python/data/Jan 2015.pdf")

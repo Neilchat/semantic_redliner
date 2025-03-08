@@ -71,7 +71,7 @@ class SectionWiseCompare(BaseStrategy):
             if not comparisons2015[key]["comparison"] == "None.":
                 prompt += f"For the section {comparisons2015[key]['path']} the differences were:\n {comparisons2015[key]['comparison']}"
         prompt += "\n\n................\n\n Please provide me with a summary of all the differnces stated above, focusing on their significance and impact."
-        completion_parameters = {"model": "gpt-4o-mini",
+        completion_parameters = {"model": self.config.openai_model_name,
                                  "messages": [{"role": "system",
                                                "content": merge_results_system_prompt},
                                               {"role": "user",
@@ -82,12 +82,12 @@ class SectionWiseCompare(BaseStrategy):
 
 
 
-    def compare_docs(self, docpath1, docpath2) -> str:
+    def compare_docs(self, docpath1, docpath2, results_folder) -> str:
         extractor = CombinedExtractor(self.config)
-        contents2015, graph2015 = extractor.get_datapoints(docpath1, "2015")
-        contents2023, graph2023 = extractor.get_datapoints(docpath2, "2023")
+        contents2015, graph2015 = extractor.get_datapoints(docpath1, "2015", results_folder)
+        contents2023, graph2023 = extractor.get_datapoints(docpath2, "2023", results_folder)
 
-        section_2023_path = "/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2023.json"
+        section_2023_path = f"{results_folder}/section_compares2023.json"
         comparisons2023 = {}
         my_file = Path(section_2023_path)
         if my_file.is_file():
@@ -113,7 +113,7 @@ class SectionWiseCompare(BaseStrategy):
                 with open(section_2023_path, 'w') as f:
                     json.dump(comparisons2023, f, indent=2)
 
-        section_2015_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/section_compares2015.json"
+        section_2015_path = f"{results_folder}/section_compares2015.json"
         comparisons2015 = {}
         my_file = Path(section_2015_path)
         if my_file.is_file():
@@ -141,7 +141,7 @@ class SectionWiseCompare(BaseStrategy):
                     json.dump(comparisons2015, f, indent=2)
 
         ans = self.merge_results(comparisons2023, comparisons2015)
-        with open("/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/sectionWise_compare.txt",
+        with open(f"{results_folder}/section_wise_compare.txt",
                   'w') as f:
             f.write(ans)
 

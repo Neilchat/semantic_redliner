@@ -21,13 +21,13 @@ class CombinedExtractor:
         self.llm = OpenAI(api_key=config.openai_api_key)
         self.config = config
 
-    def get_datapoints(self, docpath, year):
+    def get_datapoints(self, docpath, year, results_folder):
         ge = GraphExtractor(self.config)
         tika_parser = TikaParser()
 
         text = tika_parser.get_text(docpath)
 
-        graph = ge.get_or_create_graph(text, year)
+        graph = ge.get_or_create_graph(text, year, results_folder)
 
         sections_structure = [SectionContents(heading= s.heading, path=s.parent + " ._. " + s.heading, parent=s.parent, entities=s.entities) for s in graph.sections if
                         len(s.subsections) == 0]

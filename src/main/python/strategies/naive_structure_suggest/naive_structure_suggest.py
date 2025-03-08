@@ -5,38 +5,35 @@ from strategies.base.strategy_config import StrategyConfig
 from text_extraction.tika_parser import TikaParser
 
 
-class NaiveCompare(BaseStrategy):
+class NaiveStructureSuggest(BaseStrategy):
     def __init__(self, config: StrategyConfig):
         super().__init__(config)
         self.llm = OpenAI(api_key=config.openai_api_key)
         self.tika_parser = TikaParser()
 
     def compare_docs(self, docpath1, docpath2, results_folder) -> str:
-
         text1 = self.tika_parser.get_text(docpath1)
         text2 = self.tika_parser.get_text(docpath2)
 
         system_prompt = \
-        """
-        You are an advanced NLP system specialized in understanding Legal documents.
-        Your job is to compare two legal documents the user supplies and output the differences in them.
-        
-        You base your answers solely on the provided document texts and nothing more.
-        """
+"""
+You are an advanced NLP system specialized in understanding Legal documents.
+Your job is to compare two legal documents in terms of their structure and suggest a better structure that combines the qualities of both.
+
+The user will supply you with Apple's Terms and Conditions from 2015 and 2023. Please understand the structure of each document, and suggest a better unified structure.
+"""
 
         user_prompt = \
-        f""" 
+            f""" 
 You have been given two versions of publicly available Apple Music’s Terms & Conditions from different years as follows.
 
 Apple Music's terms and conditions from 2015: 
 {text1}
-        
+
 Apple Music's terms and conditions from 2023: 
 {text2}
 
-Please build a solution to summarise the differences between the two documents, and provide insights for the legal team by completing the following analysis:
--	A commentary on the nature of the differences to help the legal team understand impact and significance (e.g. substantive meaningful change over form).
-
+Please provide suggestions for standardizing the Terms and Conditions to create a more consistent format.
 """
         completion_parameters = {"model": self.config.openai_model_name,
                                  "messages": [{"role": "system",
@@ -46,7 +43,8 @@ Please build a solution to summarise the differences between the two documents, 
                                  "temperature": 0.0}
 
         ans = self.llm.chat.completions.create(**completion_parameters).choices[0].message.content
-        with open(f"{results_folder}/naive_compare.txt",
+
+        with open(f"{results_folder}/naive_structure_suggest.txt",
                   'w') as f:
             f.write(ans)
         return ans

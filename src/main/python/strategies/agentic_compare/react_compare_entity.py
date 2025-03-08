@@ -11,8 +11,7 @@ from langchain.chat_models import ChatOpenAI
 from strategies.agentic_compare.prompt_store import agent_with_url_prompt, agent_without_url_prompt
 
 
-def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False, use_url = False):
-
+def compare_entities(aspect, vectorstore2015, vectorstore2023, filter=False, use_url=False):
     retriever_2015 = vectorstore2015.as_retriever(search_type="similarity_score_threshold",
                                                   search_kwargs={"score_threshold": .5, "k": 3})
 
@@ -72,15 +71,13 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False, u
 
         Provide a structured summary of differences. Explaining the impact and significance of each difference.
         """
-        llm = ChatOpenAI(openai_api_key=config.API_KEY, model="gpt-4o-mini", temperature=0)
+        llm = ChatOpenAI(openai_api_key=config.API_KEY, model=config.config.openai_model_name, temperature=0)
         return llm.predict(prompt)
-
 
     def compare_contexts_tool(input_dict):
         """Wrapper function to allow multi-input comparison"""
         json_ = json.loads(input_dict)
         return compare_contexts(json_["context_2015"], json_["context_2023"], json_["aspect"])
-
 
     # Define Langchain tools
     retrieve_2015_tool = Tool(
@@ -108,7 +105,7 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False, u
     )
 
     # Initialize Langchain ReAct Agent
-    llm = ChatOpenAI(openai_api_key=config.API_KEY, model="gpt-4o-mini", temperature=0)
+    llm = ChatOpenAI(openai_api_key=config.API_KEY, model=config.config.openai_model_name, temperature=0)
     from langchain import hub
     prompt = hub.pull("hwchase17/react")
     if use_url:
@@ -128,9 +125,9 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False, u
     )
 
     # Run agent
-    response = agent_executor.invoke({"input":f"""Compare the 2015 and 2023 version of Apple's Terms and Conditions report
+    response = agent_executor.invoke({"input": f"""Compare the 2015 and 2023 version of Apple's Terms and Conditions report
                           with respect to information on {aspect}.\n
                          Please respond with structured summary of differences you find explaining the impact and significance of each difference.
                          """
-    })
+                                      })
     return response["output"]

@@ -5,7 +5,7 @@ from strategies.base.strategy_config import StrategyConfig
 
 class FinalReportGenerator:
     def __init__(self, config: StrategyConfig):
-        self.llm = ChatOpenAI(openai_api_key=config.openai_api_key, model="gpt-4o-mini", temperature=0)
+        self.llm = ChatOpenAI(openai_api_key=config.openai_api_key, model=config.openai_model_name, temperature=0)
 
     def create_policy_product_report(self, product_report, policy_report):
         prompt = policy_product_merger_prompt.format(product_report=product_report,

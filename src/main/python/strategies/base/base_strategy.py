@@ -8,5 +8,5 @@ class BaseStrategy(ABC):
         self.config = config
 
     @abstractmethod
-    def compare_docs(self, docpath1, docpath2) -> str:
+    def compare_docs(self, docpath1, docpath2, results_folder) -> str:
         pass

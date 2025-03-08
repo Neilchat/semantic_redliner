@@ -22,7 +22,6 @@ from text_extraction.tika_parser import TikaParser
 
 class EntityType(str, Enum):
     PRODUCT = "product"
-    AMOUNT = "amount"
     POLICY = "policy"
 
 
@@ -46,6 +45,8 @@ class AgenticCompare(BaseStrategy):
             deployment=config.openai_embedding_model_name,
             api_key=config.openai_api_key
         )
+        self.vectorstore2023 = None
+        self.vectorstore2015 = None
 
     def create_vector_stores(self, text2015, text2023):
         splits2015 = get_text_splits(text2015)
@@ -64,11 +65,11 @@ class AgenticCompare(BaseStrategy):
             location=":memory:",
             collection_name="2023"
         )
-    def extract_entities(self, text, year):
+    def extract_entities(self, text, year, result_folder):
 
         user_prompt = \
             f""" 
-        Please help me extract the entities following piece of text into a graph using the structured output format.
+        Please help me extract the entities in following piece of text into a graph using the structured output format.
 
         ***Document Text***
         {text}
@@ -82,7 +83,7 @@ class AgenticCompare(BaseStrategy):
                                  "temperature": 0.0,
                                  "response_format": Entities}
 
-        entities_file_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/entities_{year}.json"
+        entities_file_path = f"{result_folder}/entities_{year}.json"
         my_file = Path(entities_file_path)
         if my_file.is_file():
             with open(entities_file_path) as f:
@@ -98,8 +99,16 @@ class AgenticCompare(BaseStrategy):
 
         return entities
 
-    def create_entity_report(self, entity_type, combined_entities, filter_enabled, use_url):
-        results_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/agenticCompare{entity_type}.txt"
+    def retry_entity_comparison(self, name, filter_enabled, use_url, retry_count):
+        for i in range(retry_count):
+            res = compare_entities(name, self.vectorstore2015, self.vectorstore2023, filter=filter_enabled,
+                                   use_url=use_url)
+            if not res == "Agent stopped due to iteration limit or time limit.":
+                return res
+        return "Agent stopped due to iteration limit or time limit."
+
+    def create_entity_report(self, entity_type, combined_entities, results_folder, filter_enabled, use_url):
+        results_path = f"{results_folder}/agentic_compare_{entity_type}.txt"
         results = Path(results_path)
         if results.is_file():
             with open(results_path) as f:
@@ -117,26 +126,27 @@ class AgenticCompare(BaseStrategy):
             for name in combined_entities:
                 type = combined_entities[name]["type"]
                 if type.lower() == entity_type.lower() and "__________________" + name + "_____________________" not in contents:
-                    with open(results_path, 'a') as f:
-                        f.write("\n\n__________________" + name + "_____________________\n\n")
-                    res = compare_entities(name, self.vectorstore2015, self.vectorstore2023, filter=filter_enabled,
-                                           use_url=use_url)
-                    with open(results_path, 'a') as f:
-                        f.write(res)
-                        f.write("\n\n")
+
+                    res = self.retry_entity_comparison(name, filter_enabled, use_url, 4)
+
+                    if not res == "Agent stopped due to iteration limit or time limit.":
+                        with open(results_path, 'a') as f:
+                            f.write("\n\n__________________" + name + "_____________________\n\n")
+                            f.write(res)
+                            f.write("\n\n")
 
             with open(results_path, 'r') as f:
                 results = f.read()
 
         return results
 
-    def compare_docs(self, docpath1, docpath2) -> str:
+    def compare_docs(self, docpath1, docpath2, results_folder) -> str:
 
         self.text2015 = self.tika_parser.get_text(docpath1)
         self.text2023 = self.tika_parser.get_text(docpath2)
 
-        self.entities2015 = self.extract_entities(self.text2015, "2015")
-        self.entities2023 = self.extract_entities(self.text2023, "2023")
+        self.entities2015 = self.extract_entities(self.text2015, "2015", results_folder)
+        self.entities2023 = self.extract_entities(self.text2023, "2023", results_folder)
         self.entities2023.entities.extend(self.entities2015.entities)
 
         combined_entities = {}
@@ -145,14 +155,16 @@ class AgenticCompare(BaseStrategy):
                 pass
             else:
                 combined_entities[entity.name] = {"description": entity.description, "type": entity.type.title()}
-        policy_report = self.create_entity_report("Policy", combined_entities, filter_enabled=False, use_url=False)
-        product_report = self.create_entity_report("Product", combined_entities, filter_enabled=True, use_url=False)
+        policy_report = self.create_entity_report("Policy", combined_entities, results_folder, filter_enabled=False, use_url=False)
+        product_report = self.create_entity_report("Product", combined_entities, results_folder, filter_enabled=True, use_url=False)
 
         final_report_generator = FinalReportGenerator(self.config)
+
         policy_product_report = final_report_generator.create_policy_product_report(product_report, policy_report)
         intro_compare = final_report_generator.compare_introductions(self.text2015[:1500], self.text2023[:1500])
+
         final_report = f"{intro_compare}\n\n{policy_product_report}"
-        with open("/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/agentic_compare.txt", 'w') as f:
+        with open(f"{results_folder}/agentic_compare.txt", 'w') as f:
             f.write(final_report)
 
         return final_report

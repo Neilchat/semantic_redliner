@@ -11,6 +11,10 @@ From SectionWise
 
 Latter is incorrect
 
+| **Contract Creation** | "These terms and conditions create a contract between you and Apple (the “Agreement”)." | Not mentioned | Establishes a formal legal relationship, emphasizing the binding nature of the terms. |
+This gets mentioned in Section-wise, not in entities.
+Better entity extraction is needed
+
 ##Quantitative Comparisons
 Faithfulness scores-
 
