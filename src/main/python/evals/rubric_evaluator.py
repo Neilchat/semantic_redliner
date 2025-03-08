@@ -7,16 +7,15 @@ from strategies.base.strategy_config import StrategyConfig
 
 rubric = \
     [
-        "The 2015 document focused more on iTunes rather than Apple products as a whole.",
-        "The 2015 document states that the agreement needs careful read through, the 2023 one doesn't.",
-        "The 2015 document mentions 1-click, 2023 document doesn't."
-        "The 2023 document mentions Apple Fitness+, 2015 document doesn't.",
-        "The 2023 document mentions Apple New+, 2015 document doesn't.",
-        "The 2023 document mentions Apple One, 2015 document doesn't."
-        "The 2023 document Agreement is governed by California Law and the 2015 one is governed by English Law",
-        "For family sharing, the 2023 document stipulates a minimum age of 13 or equivalent in their home country, whereas the 2015 document doesn't mention home country",
+        "The 2015 report focused more on iTunes rather than Apple products as a whole.",
+        "The 2015 report states that the agreement needs careful read through, the 2023 one doesn't.",
+        "The 2023 report Agreement is governed by California Law.",
+        "The 2015 report is governed by English Law",
+        "For family sharing, the 2023 report stipulates a minimum age of 13 or equivalent in their home country",
+        "For family sharing, the 2015 report doesn't mention home country",
      ]
 
+# TODO wire this up so that the markdown is read properly, currently it suffers because the table is not being well.
 class RubricEvaluator:
     def __init__(self, config: StrategyConfig):
         self.model = OpenAI(api_key=config.openai_api_key)
@@ -69,6 +68,7 @@ class RubricEvaluator:
             'role': 'user',
             'content': (
                 f"ANSWER: {result}"
+                f"Rember that the ANSWER is formatted as a MarkDown table and has columns pertaining to the 2013 report and the 2023 report."
             ),
         }]
         return prompt
