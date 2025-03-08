@@ -16,6 +16,10 @@ class SectionContents(BaseModel):
     content: Optional[str] = None
     entities: List[Entity]
 
+# TODO the extraction is far from perfect and needs work.
+#  Section llm extraction works decently well.
+#  Instead of using LLM sherpa one can iterate over the document building it up section by section.
+
 class CombinedExtractor:
     def __init__(self, config: StrategyConfig):
         self.llm = OpenAI(api_key=config.openai_api_key)

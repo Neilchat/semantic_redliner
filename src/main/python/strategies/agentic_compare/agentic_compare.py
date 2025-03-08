@@ -49,6 +49,8 @@ class AgenticCompare(BaseStrategy):
         self.vectorstore2015 = None
 
     def create_vector_stores(self, text2015, text2023):
+
+        # TODO here instead of random chunks using sections from graph extract module will make it better
         splits2015 = get_text_splits(text2015)
         splits2023 = get_text_splits(text2023)
 

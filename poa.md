@@ -46,3 +46,23 @@ Why this isn't working well?
 - qualitative
 - deepeval faithfulness
 - rubric with geval expected score WIP
+
+
+##Further steps
+- Fix up the sections generator
+  - This is one reason the SectionWiseCompare is suffering
+  - New plan:
+    - LLM to extract section titles in sequence as a tree
+    - Iterate over words and regex match to fill out contents instead of LLM sherpa
+- Use section contents with link to branch in section tree as chunking (AgenticCompare)
+  - The issue right now:
+    - Say I get a relevant chunk on Privacy, I might not know what product it is for
+    - Chunks are not semantic boxes - worse retrieval
+- Fix URL text generation
+  - Needs to expand to take as input the document year, return that with the response
+  - It also needs to check when the page was last updated and that it corresponds to the year asked for
+  - It also needs to extract all the text well, currently just p which seems to work for most of these apple links
+  - If text is too large a semantic similarity search over it is required
+- Fix rubric evals
+  - The eval prompt is not reading the markdown table well
+  - Extract answer from markdown as paragraph and pass to eval
