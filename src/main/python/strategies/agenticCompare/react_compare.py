@@ -1,19 +1,28 @@
 import json
+
+from langchain_community.document_loaders import AsyncChromiumLoader
+from langchain_community.document_transformers import BeautifulSoupTransformer
+
 import config
-from langchain.agents import initialize_agent, AgentType, create_react_agent, AgentExecutor
+from langchain.agents import create_react_agent, AgentExecutor
 from langchain.tools import Tool
 from langchain.chat_models import ChatOpenAI
-from langchain.embeddings import OpenAIEmbeddings
 
-def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False):
+from strategies.agenticCompare.prompt_store import agent_with_url_prompt, agent_without_url_prompt
+
+
+def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False, use_url = False):
 
     retriever_2015 = vectorstore2015.as_retriever(search_type="similarity_score_threshold",
                                                   search_kwargs={"score_threshold": .5, "k": 3})
+
     retriever_2023 = vectorstore2023.as_retriever(search_kwargs={"score_threshold": .5, "k": 3})
+
+    bs_transformer = BeautifulSoupTransformer()
 
     # Define retrieval tools
     def retrieve_context_2015(query):
-        """Retrieve relevant context from Document 1"""
+        """Retrieve relevant context from 2015 report"""
         results = retriever_2015.get_relevant_documents(query, k=3)
         q = query.strip().replace("\"", "").lower()
         if filter:
@@ -24,10 +33,8 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False):
             return f"The 2015 report does not mention {q} at all."
         return r
 
-
-
     def retrieve_context_2023(query):
-        """Retrieve relevant context from Document 2"""
+        """Retrieve relevant context from 2023 report"""
         results = retriever_2023.get_relevant_documents(query, k=3)
         q = query.strip().replace("\"", "").lower()
         if filter:
@@ -37,6 +44,13 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False):
         if len(r) == 0:
             return f"The 2023 report does not mention {q} at all."
         return r
+
+    def get_text_from_url(url):
+        """Retrieve relevant context from url"""
+        loader = AsyncChromiumLoader([url])
+        html = loader.load()
+        docs_transformed = bs_transformer.transform_documents(html, tags_to_extract=["p"])
+        return docs_transformed[0].page_content[:5000]
 
     # Define comparison tool
     def compare_contexts(context_2015, context_2023, aspect):
@@ -75,6 +89,12 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False):
         description="Retrieves relevant context from Document 2 based on a query."
     )
 
+    retrieve_text_from_url_tool = Tool(
+        name="RetrieveURLText",
+        func=get_text_from_url,
+        description="Retrieves relevant context from any url found in the retrieved document contexts"
+    )
+
     compare_tool = Tool(
         name="CompareContexts",
         func=compare_contexts_tool,
@@ -85,38 +105,20 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False):
     llm = ChatOpenAI(openai_api_key=config.API_KEY, model="gpt-4o-mini", temperature=0)
     from langchain import hub
     prompt = hub.pull("hwchase17/react")
-    print(prompt.template)
-    prompt.template = """
-Answer the following questions as best you can. You have access to the following tools:
+    if use_url:
+        prompt.template = agent_with_url_prompt
+        tools = [retrieve_2015_tool, retrieve_2023_tool, retrieve_text_from_url_tool]
+    else:
+        prompt.template = agent_without_url_prompt
+        tools = [retrieve_2015_tool, retrieve_2023_tool]
 
-{tools}
-
-Use the following format. Follow the step EXACTLY and in SEQUENCE:
-
-Question: the input question you must answer
-Thought: you should always think about what to do
-Action: the action to take, should be one of [{tool_names}]
-Action Input: the input to the action
-Observation: the result of the action
-Thought: you should always think about what to do
-Action: the action to take, should be one of [{tool_names}]
-Action Input: the input to the action
-Observation: the result of the action
-
-Final Answer: A structured and detailed summary of the difference in the two documents regarding the given aspect.
-
-Begin!
-
-Question: {input}
-Thought:{agent_scratchpad}
-    """
-    react_agent = create_react_agent(llm, [retrieve_2015_tool, retrieve_2023_tool], prompt)
+    react_agent = create_react_agent(llm, tools, prompt)
     agent_executor = AgentExecutor(
         agent=react_agent,
-        tools=[retrieve_2015_tool, retrieve_2023_tool],
+        tools=tools,
         verbose=True,
         handle_parsing_errors=True,
-        max_iterations=4  # useful when agent is stuck in a loop
+        max_iterations=5  # useful when agent is stuck in a loop
     )
 
     # Run agent

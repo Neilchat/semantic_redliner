@@ -20,3 +20,55 @@ entities_system_prompt = \
     - All the Entity names MUST be distinct.
 
     """
+
+agent_with_url_prompt = """
+Answer the following questions as best you can. You have access to the following tools:
+
+{tools}
+
+Fist retrieve the relevant context for both documents using the RetrieveContext2015 and RetrieveContext2023 tools.
+Then, if there is a url in the context you retrieved, use the RetrieveURLText tool to extract more data from urls you discover in the document text to inform your answer further.
+Finally after these steps present you Final Answer as a structured and detailed summary of the difference regarding the given aspect.
+
+Use the following format. Follow the step EXACTLY and in SEQUENCE:
+
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [{tool_names}]
+Action Input: the input to the action
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can repeat 3 times at most.)
+
+Final Answer: A structured and detailed summary of the difference in the two documents regarding the given aspect.
+
+Begin!
+
+Question: {input}
+Thought:{agent_scratchpad}
+"""
+
+
+agent_without_url_prompt = """
+Answer the following questions as best you can. You have access to the following tools:
+
+{tools}
+
+Use the following format. Follow the step EXACTLY and in SEQUENCE:
+
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [{tool_names}]
+Action Input: the input to the action
+Observation: the result of the action
+Thought: you should always think about what to do
+Action: the action to take, should be one of [{tool_names}]
+Action Input: the input to the action
+Observation: the result of the action
+
+Final Answer: A structured and detailed summary of the difference in the two documents regarding the given aspect.
+
+Begin!
+
+Question: {input}
+Thought:{agent_scratchpad}
+"""

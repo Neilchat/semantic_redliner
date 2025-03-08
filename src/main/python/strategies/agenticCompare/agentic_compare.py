@@ -24,15 +24,15 @@ class EntityType(str, Enum):
     AMOUNT = "amount"
     POLICY = "policy"
 
+
 class Entity(BaseModel):
     type: EntityType
     name: str
     description: str
 
+
 class Entities(BaseModel):
     entities: List[Entity]
-
-
 
 
 class AgenticCompare(BaseStrategy):
@@ -45,7 +45,6 @@ class AgenticCompare(BaseStrategy):
             deployment=config.openai_embedding_model_name,
             api_key=config.openai_api_key
         )
-
 
     def create_vector_stores(self, text2015, text2023):
         splits2015 = get_text_splits(text2015)
@@ -66,7 +65,7 @@ class AgenticCompare(BaseStrategy):
         )
 
     def create_entity_report(self, entity_type, combined_entities):
-        results_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/agenticCompare{entity_type}.txt"
+        results_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/agenticCompare{entity_type}_url_hop.txt"
         results = Path(results_path)
         if results.is_file():
             with open(results_path) as f:
@@ -84,9 +83,11 @@ class AgenticCompare(BaseStrategy):
                     with open(results_path, 'a') as f:
                         f.write("\n\n__________________" + name + "_____________________\n\n")
                     if entity_type.lower() == "policy":
-                        res = compare_entities(name, self.vectorstore2015, self.vectorstore2023)
+                        res = compare_entities(name, self.vectorstore2015, self.vectorstore2023, filter=False,
+                                               use_url=False)
                     else:
-                        res = compare_entities(name, self.vectorstore2015, self.vectorstore2023, True)
+                        res = compare_entities(name, self.vectorstore2015, self.vectorstore2023, filter=True,
+                                               use_url=False)
                     with open(results_path, 'a') as f:
                         f.write(res)
                         f.write("\n\n")
@@ -151,4 +152,3 @@ class AgenticCompare(BaseStrategy):
                 file.write(json_data)
 
         return entities
-
