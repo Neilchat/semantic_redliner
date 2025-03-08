@@ -1,4 +1,4 @@
-from strategies.agenticCompare.agentic_compare import AgenticCompare
+from strategies.agentic_compare.agentic_compare import AgenticCompare
 from strategies.base.strategy_config import StrategyConfig
 from strategies.naive_compare.naive_compare import NaiveCompare
 from strategies.sectionwise_compare.sectionwise_compare import SectionWiseCompare
@@ -6,7 +6,7 @@ from strategies.sectionwise_compare.sectionwise_compare import SectionWiseCompar
 STRATEGY_MAPPING = {
     "naiveCompare": NaiveCompare,
     "sectionWiseCompare": SectionWiseCompare,
-    "agenticCompare": AgenticCompare
+    "agentic_compare": AgenticCompare
 }
 
 class AutoStrategy:

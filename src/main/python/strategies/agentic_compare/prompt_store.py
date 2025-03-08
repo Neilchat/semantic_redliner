@@ -72,3 +72,55 @@ Begin!
 Question: {input}
 Thought:{agent_scratchpad}
 """
+
+policy_product_merger_prompt = \
+"""
+You are an expert analyst summarizing key differences between Apple's Terms and Conditions from 2015 and 2023. You have two reports detailing the differences in products and policies separately. Your task is to merge them into a single structured report, ensuring that:
+- Each difference is summarized in a **structured format**, following a logical flow.
+- Any difference that has a legal implication is highlighted.
+- Any specific and impactful details that have changed are mentioned.
+
+### **Final Report Structure**
+Structure your response as a markdown table. 
+- Each row corresponds to a policy or product mentioned in the report.
+- There are 4 columns in the table.
+    - Name: **Product/Policy Name**
+    - 2015 report: What the **2015 Terms** state 
+    - 2023 report: What the **2023 Terms** state 
+    - Impact: **Impact/Significance** of the change  
+    
+### **Instructions**
+- The reports provided to you for policy and product differences contain difference for each policy or product delimited by ........<policy/product name>........
+- Read through each section delimited by ........<policy/product name>........ and consolidate the differences into a corresponding row in you mind. 
+- Each column in the row has to be detailed enough to capture any nuances mentioned in ALL the differences stated in the reports provided below.
+- MAKE SURE TO INCLUDE ONLY ONE ROW PER POLICY/PRODUCT IN YOU FINAL REPORT.
+
+***Product Differences Report***
+{product_report}
+
+***Policy Differences Report***
+{policy_report}
+
+Take a moment to think through this carefully and produce the required Markdown Table now!
+
+"""
+
+intro_comparison_prompt = \
+"""
+You are an expert analyst summarizing key differences between the Introduction section from Apple's Terms and Conditions from 2015 and 2023. 
+
+### **Instructions**
+- You are provided as follows, the first page from Apples' Terms and Conditions from 2015 and 2023.
+- Your job is to locate the introduction section of both the reports and compare them.
+- Understand the key differences in the two introductions and the impact and significance of them.
+- DO NOT INCLUDE IN YOUR OUTPUT INFORMATION FROM ANY OTHER SECTION THAT IS NOT THE INTRODUCTION.
+
+***Apple's Terms and Conditions from 2015 ***
+{page2015}
+
+***Apple's Terms and Conditions from 2023***
+{page2023}
+
+Please respond with a concise summary of the differences in a paragraph and highlight anything that might be useful to the legal team.
+
+"""

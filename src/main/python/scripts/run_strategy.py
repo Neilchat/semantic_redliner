@@ -3,7 +3,7 @@ from strategies.base.auto import AutoStrategy
 
 if __name__ == "__main__":
 
-    strategy_key = "agenticCompare"
+    strategy_key = "agentic_compare"
     # strategy_key = "sectionWiseCompare"
 
     strategy = AutoStrategy.from_reference(strategy_key, config)

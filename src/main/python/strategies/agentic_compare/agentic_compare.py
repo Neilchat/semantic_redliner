@@ -11,9 +11,10 @@ from openai import OpenAI
 
 from pydantic import BaseModel
 
-from strategies.agenticCompare.prompt_store import entities_system_prompt
-from strategies.agenticCompare.react_compare import compare_entities
-from strategies.agenticCompare.utils import get_text_splits
+from strategies.agentic_compare.final_report_generator import FinalReportGenerator
+from strategies.agentic_compare.prompt_store import entities_system_prompt
+from strategies.agentic_compare.react_compare_entity import compare_entities
+from strategies.agentic_compare.utils import get_text_splits
 from strategies.base.base_strategy import BaseStrategy
 from strategies.base.strategy_config import StrategyConfig
 from text_extraction.tika_parser import TikaParser
@@ -63,62 +64,6 @@ class AgenticCompare(BaseStrategy):
             location=":memory:",
             collection_name="2023"
         )
-
-    def create_entity_report(self, entity_type, combined_entities):
-        results_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/agenticCompare{entity_type}_url_hop.txt"
-        results = Path(results_path)
-        if results.is_file():
-            with open(results_path) as f:
-                results = f.read()
-        else:
-
-            with open(results_path, 'w') as f:
-                f.write(f"Difference Summaries\n\n\n {entity_type} \n")
-            with open(results_path, 'r') as f:
-                contents = f.read()
-
-            for name in combined_entities:
-                type = combined_entities[name]["type"]
-                if type.lower() == entity_type.lower() and "__________________" + name + "_____________________" not in contents:
-                    with open(results_path, 'a') as f:
-                        f.write("\n\n__________________" + name + "_____________________\n\n")
-                    if entity_type.lower() == "policy":
-                        res = compare_entities(name, self.vectorstore2015, self.vectorstore2023, filter=False,
-                                               use_url=False)
-                    else:
-                        res = compare_entities(name, self.vectorstore2015, self.vectorstore2023, filter=True,
-                                               use_url=False)
-                    with open(results_path, 'a') as f:
-                        f.write(res)
-                        f.write("\n\n")
-
-            with open(results_path, 'r') as f:
-                results = f.read()
-
-        return results
-
-    def compare_docs(self, docpath1, docpath2) -> str:
-
-        self.text2015 = self.tika_parser.get_text(docpath1)
-        self.text2023 = self.tika_parser.get_text(docpath2)
-
-        self.create_vector_stores(self.text2015, self.text2023)
-
-        self.entities2015 = self.extract_entities(self.text2015, "2015")
-        self.entities2023 = self.extract_entities(self.text2023, "2023")
-        self.entities2023.entities.extend(self.entities2015.entities)
-
-        combined_entities = {}
-        for entity in self.entities2023.entities:
-            if entity.name in combined_entities:
-                pass
-            else:
-                combined_entities[entity.name] = {"description": entity.description, "type": entity.type.title()}
-        policy_results = self.create_entity_report("Policy", combined_entities)
-        product_results = self.create_entity_report("Product", combined_entities)
-
-        return policy_results + "\n\n" + product_results
-
     def extract_entities(self, text, year):
 
         user_prompt = \
@@ -152,3 +97,63 @@ class AgenticCompare(BaseStrategy):
                 file.write(json_data)
 
         return entities
+
+    def create_entity_report(self, entity_type, combined_entities, filter_enabled, use_url):
+        results_path = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/agenticCompare{entity_type}.txt"
+        results = Path(results_path)
+        if results.is_file():
+            with open(results_path) as f:
+                results = f.read()
+        else:
+
+            if self.vectorstore2023 is None:
+                self.create_vector_stores(self.text2015, self.text2023)
+
+            with open(results_path, 'w') as f:
+                f.write(f"Difference Summaries\n\n\n {entity_type} \n")
+            with open(results_path, 'r') as f:
+                contents = f.read()
+
+            for name in combined_entities:
+                type = combined_entities[name]["type"]
+                if type.lower() == entity_type.lower() and "__________________" + name + "_____________________" not in contents:
+                    with open(results_path, 'a') as f:
+                        f.write("\n\n__________________" + name + "_____________________\n\n")
+                    res = compare_entities(name, self.vectorstore2015, self.vectorstore2023, filter=filter_enabled,
+                                           use_url=use_url)
+                    with open(results_path, 'a') as f:
+                        f.write(res)
+                        f.write("\n\n")
+
+            with open(results_path, 'r') as f:
+                results = f.read()
+
+        return results
+
+    def compare_docs(self, docpath1, docpath2) -> str:
+
+        self.text2015 = self.tika_parser.get_text(docpath1)
+        self.text2023 = self.tika_parser.get_text(docpath2)
+
+        self.entities2015 = self.extract_entities(self.text2015, "2015")
+        self.entities2023 = self.extract_entities(self.text2023, "2023")
+        self.entities2023.entities.extend(self.entities2015.entities)
+
+        combined_entities = {}
+        for entity in self.entities2023.entities:
+            if entity.name in combined_entities:
+                pass
+            else:
+                combined_entities[entity.name] = {"description": entity.description, "type": entity.type.title()}
+        policy_report = self.create_entity_report("Policy", combined_entities, filter_enabled=False, use_url=False)
+        product_report = self.create_entity_report("Product", combined_entities, filter_enabled=True, use_url=False)
+
+        final_report_generator = FinalReportGenerator(self.config)
+        policy_product_report = final_report_generator.create_policy_product_report(product_report, policy_report)
+        intro_compare = final_report_generator.compare_introductions(self.text2015[:1500], self.text2023[:1500])
+        final_report = f"{intro_compare}\n\n{policy_product_report}"
+        with open("/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/agentic_compare.txt", 'w') as f:
+            f.write(final_report)
+
+        return final_report
+

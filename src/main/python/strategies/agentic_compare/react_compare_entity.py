@@ -8,7 +8,7 @@ from langchain.agents import create_react_agent, AgentExecutor
 from langchain.tools import Tool
 from langchain.chat_models import ChatOpenAI
 
-from strategies.agenticCompare.prompt_store import agent_with_url_prompt, agent_without_url_prompt
+from strategies.agentic_compare.prompt_store import agent_with_url_prompt, agent_without_url_prompt
 
 
 def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False, use_url = False):
@@ -44,6 +44,12 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter = False, u
         if len(r) == 0:
             return f"The 2023 report does not mention {q} at all."
         return r
+
+    # TODO this needs to expand to take as input the document year, return that with the response
+    #  It also needs to check when the page was last updated and that it corresponds to the year asked for
+    #  It also needs to extract all the text well, currently just p which seems to work for most of these apple links
+    #  If text is too large a semantic similarity search over it is required
+    #  Disabled for now.
 
     def get_text_from_url(url):
         """Retrieve relevant context from url"""
