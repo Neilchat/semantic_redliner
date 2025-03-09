@@ -18,9 +18,15 @@ Scripts contain all runnables to perform comparison/suggestion
 
 ##How to run
 
-Run scripts/run_end_to_end.py to run any strategy end to end with result generation and eval.
+To run SectionWiseCompare you need to run a llmsherpa server locally. Run via docker:
+
+`docker pull ghcr.io/nlmatics/nlm-ingestor:latest`
+
+`docker run -p 5010:5001 ghcr.io/nlmatics/nlm-ingestor:latest`
+
+Run `scripts/run_end_to_end.py` to run any strategy end to end with result generation and eval.
 Specify strategy key, results folder path, doc paths.
 
 ##Results
 
-data module contain the results for all strategies
+data folder contain the results for all strategies
