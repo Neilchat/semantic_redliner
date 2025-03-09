@@ -67,3 +67,10 @@ Why this isn't working well?
   - The eval prompt is not reading the markdown table well
   - Extract answer from markdown as paragraph and pass to eval
 - Add tests, comments
+
+### Next agent iteration:
+- Extraction Agent: Extracts sections and entities.
+- Retrieval Agent: Retrieves and aligns similar sections from both documents.
+- Comparison Agent: Summarizes and compares the content.
+- Aggregation Agent: Compiles results into a structured final report.
+- Orchestrate using Langraph
