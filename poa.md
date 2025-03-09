@@ -66,3 +66,4 @@ Why this isn't working well?
 - Fix rubric evals
   - The eval prompt is not reading the markdown table well
   - Extract answer from markdown as paragraph and pass to eval
+- Add tests, comments

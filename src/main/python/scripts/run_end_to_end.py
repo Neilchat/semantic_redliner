@@ -40,7 +40,7 @@ if __name__ == "__main__":
     faithfulness = get_faithfulness_score(docpath1=docpath1, docpath2=docpath2, result_path=final_report_path)
 
     rubric_evaluator = RubricEvaluator(config)
-    rubric_score = rubric_evaluator.evaluate(final_report_path)
+    # rubric_score = rubric_evaluator.evaluate(final_report_path)
 
     print(f"Strategy: {strategy_key} \nTime taken: {end-start} seconds\nFaithfulness Score: {faithfulness}\n")
     with open(final_report_path, 'a') as f:
@@ -48,7 +48,7 @@ if __name__ == "__main__":
                 f"Strategy: {strategy_key} \n\n"
                 f"Time taken: {end-start} seconds\n\n"
                 f"Faithfulness Score: {faithfulness}\n\n"
-                f"Rubric Score: {rubric_score}\n\n"
+                # f"Rubric Score: {rubric_score}\n\n"
                 f"Model: {config.openai_model_name}")
 
     print(result)

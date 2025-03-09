@@ -16,6 +16,10 @@ Text Extraction contains Tika module to extract doc text
 
 Scripts contain all runnables to perform comparison/suggestion
 
+Markdowns:
+- evaluations.md contain all the evals
+- poa.md contains my chain of thought while executing this build
+
 ## How to run
 
 To run SectionWiseCompare you need to run a llmsherpa server locally. Run via docker:
