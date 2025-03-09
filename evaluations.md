@@ -1,32 +1,41 @@
+# Compare
+
 ## Qualitative Comparisons
 
 - Naive compare is not at all detailed, more of an overview and doesn't give much insight (prompt changes might make it much better though).
 
-- SectionWise is better and gives some details 
+- SectionWise is better and gives some details but messes up facts sometimes. The section detailing is poor.
 
-Agentic compare gives a much more verbose and impactful answer:
+- Agentic compare gives a much more verbose and impactful answer. The section detailing that it has is great.
 
-For example:
 
-From Agentic
-   1. **Right of Cancellation**:
-      - **2015**: Customers could cancel their order within 14 days of receiving their receipt without providing a reason. Specific exceptions were noted for iTunes Gifts, which could not be refunded once redeemed.
-      - **2023**: The right of cancellation remains the same, allowing cancellation within 14 days without a reason. However, the exceptions have been streamlined, with a specific mention of "Complete My Season" for subscription services, which must be canceled through iTunes Support.
+#### Some comparisons
 
-From SectionWise
-   - The 2023 report includes a right of cancellation within 14 days of receiving a receipt, which is a new consumer protection feature not present in the 2015 report.
+From Agentic:
 
-........
+- **2015**: Customers could cancel their order within 14 days of receiving their receipt without providing a reason.
+- **2023**: Cancellation rights remain largely the same, but specifies that subscription services can only be canceled after the initial subscription, not at each automatic renewal.
+- **Impact**: Clarification regarding subscription services provides consumers with a better understanding of their rights concerning ongoing payments.
+  
+From SectionWise:
 
-Where agentic suffers? Entity detection
-| **Contract Creation** | "These terms and conditions create a contract between you and Apple (the “Agreement”)." | Not mentioned | Establishes a formal legal relationship, emphasizing the binding nature of the terms. |
-This gets mentioned in Section-wise, not in entities.
+- The 2023 report includes a right of cancellation within 14 days of receiving a receipt, which is a new consumer protection feature not present in the 2015 report.
+
+.......
 
 Agentic also comes up with good impact insights:
-Governing law insight.
-Popular Near Me	Privacy and User Control|	Users are informed that they can opt out of data collection by disabling Location Services or turning off “Popular Near Me.”|	Implies a more generalized approach to user data and privacy, focusing on how apps are ranked and displayed.|	May enhance user trust but could limit personalization that users previously experienced.
+- Governing law insight - Affects users outside the U.S. as they are now subject to California law, potentially increasing legal costs for non-U.S. users
+- Privacy insight - May enhance user trust but could limit personalization that users previously experienced.
 
 ........
+
+
+Where agentic suffers? 
+
+- Entity detection is not perfect:
+  - | **Contract Creation** | "These terms and conditions create a contract between you and Apple (the “Agreement”)." | Not mentioned | Establishes a formal legal relationship, emphasizing the binding nature of the terms. |
+    This gets mentioned in Section-wise, not in entities.
+.........
 
 Naive with o1-mini shows promise, it includes some details but isn't as comprehensive. Impact analysis is good.
 
@@ -62,4 +71,28 @@ o1-mini
 Time taken: 24.97355318069458 seconds
 
 
+##Conclusion
+
+Agentic workflow seems like the better suited as it breaks the problem down into bits that can be compared properly.
+It has several missing pieces that can be improved.
+
+# Suggest Structure
+
+## Qualitative Comparisons
+
+- Naive
+  - Quite verbose and detailed in its suggestion. Breaks it down into important sections and doesn't skip any section.
+  - FAMILY SHARING not a separate section
+  - Focuses more on policy sections
+  - Time taken: 16.12815499305725 seconds
+- Structured
+  - As detailed as previous but skips some sections (Governing Law for example).
+  - But the breakdown is nicer in terms of sections and subsections.
+  - FAMILY SHARING a separate section
+  - Includes some product specific sections
+  - Time taken: 71.2936282157898 seconds
+
+## Conclusion
+
+Naive will work pretty well with prompt engineering tailored to what we want, and is much faster.
 

@@ -14,11 +14,13 @@ def camel_to_snakecase(name):
 
 if __name__ == "__main__":
 
-    strategy_key = "naiveCompare"
+    # strategy_key = "naiveCompare"
     # strategy_key = "sectionWiseCompare"
     # strategy_key = "agenticCompare"
 
     # strategy_key = "naiveStructureSuggest"
+    strategy_key = "structuredStructureSuggest"
+
 
     results_folder = f"/Users/saswata/Documents/semantic_redliner/src/main/python/data/results/{strategy_key}"
     Path(results_folder).mkdir(parents=True, exist_ok=True)
