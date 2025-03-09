@@ -71,7 +71,7 @@ o1-mini
 Time taken: 24.97355318069458 seconds
 
 
-##Conclusion
+## Conclusion
 
 Agentic workflow seems like the better suited as it breaks the problem down into bits that can be compared properly.
 It has several missing pieces that can be improved.
