@@ -8,6 +8,7 @@
 
 - Agentic compare gives a much more verbose and impactful answer. The section detailing that it has is great.
 
+- Naive with o1-mini shows promise, it includes some details but isn't as comprehensive. Impact analysis is good.
 
 #### Some comparisons
 
@@ -37,7 +38,6 @@ Where agentic suffers?
     This gets mentioned in Section-wise, not in entities.
 .........
 
-Naive with o1-mini shows promise, it includes some details but isn't as comprehensive. Impact analysis is good.
 
 ## Quantitative Comparisons
 
