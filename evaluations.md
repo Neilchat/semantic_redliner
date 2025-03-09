@@ -1,4 +1,4 @@
-##Qualitative Comparisons
+## Qualitative Comparisons
 First iteration worked better. Qualitative example:
 
 From Agentic
@@ -22,19 +22,19 @@ Popular Near Me	Privacy and User Control	Users are informed that they can opt ou
 
 Ask to Buy comes up in section compare not in agent compare. Why? It is in family sharing just doesn't come up in diff, the 13 year age cut off does though.
 
-##Quantitative Comparisons
+## Quantitative Comparisons
 Faithfulness scores-
 
-###Agentic -
+### Agentic -
 
 policy: faithfulness (0.8571428571428571, "The score is 0.86 because the actual output misidentifies the entities involved in the cancellation notice. It mentions 'iTunes S.à r.l. in 2015' instead of the correct 'iTunes Sarl' and erroneously includes 'Apple Distribution International Ltd.' for 2023, which contradicts the retrieval context.")
 
 product: faithfulness (1.0, 'The score is 1.00 because there are no contradictions, indicating that the actual output is perfectly aligned with the retrieval context.')
 
-###SectionWise -
+### SectionWise -
 
 overall: faithfulness (0.5675675675675675, "The score is 0.57 because the actual output contains multiple claims about the 2015 and 2023 reports that are not supported by the retrieval context, such as assertions regarding iTunes' terms modification, termination rights, privacy policy, and age requirements. These discrepancies highlight significant gaps between the actual output and the source material.")
 
 
-###Naive -
+### Naive -
 faithfulness (1.0, 'The score is 1.00 because there are no contradictions present, indicating that the actual output completely aligns with the retrieval context.')

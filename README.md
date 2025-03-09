@@ -1,6 +1,6 @@
-#Semantic Document Comparison
+# Semantic Document Comparison
 
-##Project structure
+## Project structure
 
 Strategies module host all the strategies for compare and suggest
 - Naive Compare
@@ -16,7 +16,7 @@ Text Extraction contains Tika module to extract doc text
 
 Scripts contain all runnables to perform comparison/suggestion
 
-##How to run
+## How to run
 
 To run SectionWiseCompare you need to run a llmsherpa server locally. Run via docker:
 
@@ -27,6 +27,6 @@ To run SectionWiseCompare you need to run a llmsherpa server locally. Run via do
 Run `scripts/run_end_to_end.py` to run any strategy end to end with result generation and eval.
 Specify strategy key, results folder path, doc paths.
 
-##Results
+## Results
 
 data folder contain the results for all strategies
