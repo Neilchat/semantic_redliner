@@ -11,37 +11,37 @@ from langchain.chat_models import ChatOpenAI
 from strategies.agentic_compare.prompt_store import agent_with_url_prompt, agent_without_url_prompt
 
 
-def compare_entities(aspect, vectorstore2015, vectorstore2023, filter=False, use_url=False):
-    retriever_2015 = vectorstore2015.as_retriever(search_type="similarity_score_threshold",
+def compare_entities(aspect, vectorstore1, vectorstore2, filter=False, use_url=False):
+    retriever_1 = vectorstore1.as_retriever(search_type="similarity_score_threshold",
                                                   search_kwargs={"score_threshold": .5, "k": 3})
 
-    retriever_2023 = vectorstore2023.as_retriever(search_kwargs={"score_threshold": .5, "k": 3})
+    retriever_2 = vectorstore2.as_retriever(search_kwargs={"score_threshold": .5, "k": 3})
 
     bs_transformer = BeautifulSoupTransformer()
 
     # Define retrieval tools
-    def retrieve_context_2015(query):
-        """Retrieve relevant context from 2015 report"""
-        results = retriever_2015.get_relevant_documents(query, k=3)
+    def retrieve_context_1(query):
+        """Retrieve relevant context from 1 report"""
+        results = retriever_1.get_relevant_documents(query, k=3)
         q = query.strip().replace("\"", "").lower()
         if filter:
             r = "\n".join([doc.page_content for doc in results if q in doc.page_content.lower()])
         else:
             r = "\n".join([doc.page_content for doc in results])
         if len(r) == 0:
-            return f"The 2015 report does not mention {q} at all."
+            return f"The 1 report does not mention {q} at all."
         return r
 
-    def retrieve_context_2023(query):
-        """Retrieve relevant context from 2023 report"""
-        results = retriever_2023.get_relevant_documents(query, k=3)
+    def retrieve_context_2(query):
+        """Retrieve relevant context from 2 report"""
+        results = retriever_2.get_relevant_documents(query, k=3)
         q = query.strip().replace("\"", "").lower()
         if filter:
             r = "\n".join([doc.page_content for doc in results if q in doc.page_content.lower()])
         else:
             r = "\n".join([doc.page_content for doc in results])
         if len(r) == 0:
-            return f"The 2023 report does not mention {q} at all."
+            return f"The 2 report does not mention {q} at all."
         return r
 
     # TODO this needs to expand to take as input the document year, return that with the response
@@ -58,16 +58,16 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter=False, use
         return docs_transformed[0].page_content[:5000]
 
     # Define comparison tool
-    def compare_contexts(context_2015, context_2023, aspect):
+    def compare_contexts(context_1, context_2, aspect):
         """Compare the two contexts based on a given aspect"""
         prompt = f"""
         Compare the following two texts based on the aspect: {aspect}
 
-        2015 Terms and Conditions Context:
-        {context_2015}
+        1 Terms and Conditions Context:
+        {context_1}
 
-        2023 Terms and Conditions Context:
-        {context_2023}
+        2 Terms and Conditions Context:
+        {context_2}
 
         Provide a structured summary of differences. Explaining the impact and significance of each difference.
         """
@@ -77,18 +77,18 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter=False, use
     def compare_contexts_tool(input_dict):
         """Wrapper function to allow multi-input comparison"""
         json_ = json.loads(input_dict)
-        return compare_contexts(json_["context_2015"], json_["context_2023"], json_["aspect"])
+        return compare_contexts(json_["context_1"], json_["context_2"], json_["aspect"])
 
     # Define Langchain tools
-    retrieve_2015_tool = Tool(
-        name="RetrieveContext2015",
-        func=retrieve_context_2015,
+    retrieve_1_tool = Tool(
+        name="RetrieveContext1",
+        func=retrieve_context_1,
         description="Retrieves relevant context from Document 1 based on a query."
     )
 
-    retrieve_2023_tool = Tool(
-        name="RetrieveContext2023",
-        func=retrieve_context_2023,
+    retrieve_2_tool = Tool(
+        name="RetrieveContext2",
+        func=retrieve_context_2,
         description="Retrieves relevant context from Document 2 based on a query."
     )
 
@@ -101,7 +101,7 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter=False, use
     compare_tool = Tool(
         name="CompareContexts",
         func=compare_contexts_tool,
-        description="Compares two contexts based on an aspect. Input: (context_2015, context_2023, aspect)."
+        description="Compares two contexts based on an aspect. Input: (context_1, context_2, aspect)."
     )
 
     # Initialize Langchain ReAct Agent
@@ -110,10 +110,10 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter=False, use
     prompt = hub.pull("hwchase17/react")
     if use_url:
         prompt.template = agent_with_url_prompt
-        tools = [retrieve_2015_tool, retrieve_2023_tool, retrieve_text_from_url_tool]
+        tools = [retrieve_1_tool, retrieve_2_tool, retrieve_text_from_url_tool]
     else:
         prompt.template = agent_without_url_prompt
-        tools = [retrieve_2015_tool, retrieve_2023_tool]
+        tools = [retrieve_1_tool, retrieve_2_tool]
 
     react_agent = create_react_agent(llm, tools, prompt)
     agent_executor = AgentExecutor(
@@ -125,8 +125,7 @@ def compare_entities(aspect, vectorstore2015, vectorstore2023, filter=False, use
     )
 
     # Run agent
-    response = agent_executor.invoke({"input": f"""Compare the 2015 and 2023 version of Apple's Terms and Conditions report
-                          with respect to information on {aspect}.\n
+    response = agent_executor.invoke({"input": f"""Compare the two version of a company's Terms and Conditions report with respect to information on {aspect}.\n
                          Please respond with structured summary of differences you find explaining the impact and significance of each difference.
                          """
                                       })

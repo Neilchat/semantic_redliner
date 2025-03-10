@@ -13,9 +13,9 @@ class FinalReportGenerator:
         report = self.llm.predict(prompt)
         return report
 
-    def compare_introductions(self, page2015, page2023):
-        prompt = intro_comparison_prompt.format(page2015=page2015,
-                                                page2023=page2023)
+    def compare_introductions(self, page1, page2):
+        prompt = intro_comparison_prompt.format(page1=page1,
+                                                page2=page2)
         report = self.llm.predict(prompt)
         return report
 

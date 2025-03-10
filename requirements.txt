@@ -10,3 +10,5 @@ llmsherpa
 rouge-score
 deepeval==2.2.6
 playwright
+flask
+markdown

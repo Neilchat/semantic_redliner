@@ -56,6 +56,9 @@ To run SectionWiseCompare you need to run a llmsherpa server locally. Run via do
 Run `scripts/run_end_to_end.py` to run any strategy end to end with result generation and eval.
 Specify strategy key, results folder path, doc paths in `scripts/run_end_to_end.py` and openai API_KEY in `config.py`
 
+Run `main.py` to start a fast api server that allows you to form the report and view it on the browser.
+Currently, supports comparing the Apple reports, and two Google Terms And Conditions report via the agentic strategy.
+
 ## Results
 
 `data` folder contain the results for all strategies

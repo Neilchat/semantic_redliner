@@ -45,27 +45,27 @@ class AgenticCompare(BaseStrategy):
             deployment=config.openai_embedding_model_name,
             api_key=config.openai_api_key
         )
-        self.vectorstore2023 = None
-        self.vectorstore2015 = None
+        self.vectorstore2 = None
+        self.vectorstore1 = None
 
-    def create_vector_stores(self, text2015, text2023):
+    def create_vector_stores(self, text1, text2):
 
         # TODO here instead of random chunks using sections from graph extract module will make it better
-        splits2015 = get_text_splits(text2015)
-        splits2023 = get_text_splits(text2023)
+        splits1 = get_text_splits(text1)
+        splits2 = get_text_splits(text2)
 
-        self.vectorstore2015 = QdrantVectorStore.from_documents(
-            documents=splits2015,
+        self.vectorstore1 = QdrantVectorStore.from_documents(
+            documents=splits1,
             embedding=self.embedder,
             location=":memory:",
-            collection_name="2015"
+            collection_name="1"
         )
 
-        self.vectorstore2023 = QdrantVectorStore.from_documents(
-            documents=splits2023,
+        self.vectorstore2 = QdrantVectorStore.from_documents(
+            documents=splits2,
             embedding=self.embedder,
             location=":memory:",
-            collection_name="2023"
+            collection_name="2"
         )
     def extract_entities(self, text, year, result_folder):
 
@@ -103,7 +103,7 @@ class AgenticCompare(BaseStrategy):
 
     def retry_entity_comparison(self, name, filter_enabled, use_url, retry_count):
         for i in range(retry_count):
-            res = compare_entities(name, self.vectorstore2015, self.vectorstore2023, filter=filter_enabled,
+            res = compare_entities(name, self.vectorstore1, self.vectorstore2, filter=filter_enabled,
                                    use_url=use_url)
             if not res == "Agent stopped due to iteration limit or time limit.":
                 return res
@@ -117,8 +117,8 @@ class AgenticCompare(BaseStrategy):
                 results = f.read()
         else:
 
-            if self.vectorstore2023 is None:
-                self.create_vector_stores(self.text2015, self.text2023)
+            if self.vectorstore2 is None:
+                self.create_vector_stores(self.text1, self.text2)
 
             with open(results_path, 'w') as f:
                 f.write(f"Difference Summaries\n\n\n {entity_type} \n")
@@ -144,15 +144,15 @@ class AgenticCompare(BaseStrategy):
 
     def compare_docs(self, docpath1, docpath2, results_folder) -> str:
 
-        self.text2015 = self.tika_parser.get_text(docpath1)
-        self.text2023 = self.tika_parser.get_text(docpath2)
+        self.text1 = self.tika_parser.get_text(docpath1)
+        self.text2 = self.tika_parser.get_text(docpath2)
 
-        self.entities2015 = self.extract_entities(self.text2015, "2015", results_folder)
-        self.entities2023 = self.extract_entities(self.text2023, "2023", results_folder)
-        self.entities2023.entities.extend(self.entities2015.entities)
+        self.entities1 = self.extract_entities(self.text1, "1", results_folder)
+        self.entities2 = self.extract_entities(self.text2, "2", results_folder)
+        self.entities2.entities.extend(self.entities1.entities)
 
         combined_entities = {}
-        for entity in self.entities2023.entities:
+        for entity in self.entities2.entities:
             if entity.name in combined_entities:
                 pass
             else:
@@ -163,9 +163,9 @@ class AgenticCompare(BaseStrategy):
         final_report_generator = FinalReportGenerator(self.config)
 
         policy_product_report = final_report_generator.create_policy_product_report(product_report, policy_report)
-        intro_compare = final_report_generator.compare_introductions(self.text2015[:1500], self.text2023[:1500])
+        intro_compare = final_report_generator.compare_introductions(self.text1[:1500], self.text2[:1500])
 
-        final_report = f"{intro_compare}\n\n{policy_product_report}"
+        final_report = f"###Intoruduction\n\n{intro_compare}\n\n###Detailed Comparison Table\n\n{policy_product_report}"
         with open(f"{results_folder}/agentic_compare.txt", 'w') as f:
             f.write(final_report)
 

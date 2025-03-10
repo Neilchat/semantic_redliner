@@ -9,11 +9,11 @@ entities_system_prompt = \
         - type: Enum that can be either of ['product', 'policy']
         - name: String that is the name of the entity verbatim from the text.
         - description: String that describes the entity in one sentence:
-            - product :- Any Apple product such as iTunes, Game Pass, etc mentioned in the text with a one line description of it.
+            - product :- Any product such as iTunes, eye glasses, etc mentioned in the text with a one line description of it.
             - policy :- Any conditions, policies, laws or rules mentioned in the text, like governing law, family sharing, security, third-party-materials, usage conditions etc with a one line description of it.
 
     ***Instructions***
-    The user will provide you the text from a Term And Conditions document regarding Apples' iTunes. Your job is extract all the required entities from it.
+    The user will provide you the text from a Term And Conditions document. Your job is extract all the required entities from it.
     - Base your response solely on the document text. Use no prior knowledge.
     - Your response must be correctly formatted using the Structured Output format provided.
     - All the Entity names MUST be distinct.
@@ -25,7 +25,7 @@ Answer the following questions as best you can. You have access to the following
 
 {tools}
 
-Fist retrieve the relevant context for both documents using the RetrieveContext2015 and RetrieveContext2023 tools.
+Fist retrieve the relevant context for both documents using the RetrieveContext1 and RetrieveContext2 tools.
 Then, if there is a url in the context you retrieved, use the RetrieveURLText tool to extract more data from urls you discover in the document text to inform your answer further.
 Finally after these steps present you Final Answer as a structured and detailed summary of the difference regarding the given aspect.
 
@@ -74,7 +74,7 @@ Thought:{agent_scratchpad}
 
 policy_product_merger_prompt = \
 """
-You are an expert analyst summarizing key differences between Apple's Terms and Conditions from 2015 and 2023. You have two reports detailing the differences in products and policies separately. Your task is to merge them into a single structured report, ensuring that:
+You are an expert analyst summarizing key differences between a company's Terms and Conditions from different years. You have two reports detailing the differences in products and policies separately. Your task is to merge them into a single structured report, ensuring that:
 - Each difference is summarized in a **structured format**, following a logical flow.
 - Any difference that has a legal implication is highlighted.
 - Any specific and impactful details that have changed are mentioned.
@@ -86,8 +86,8 @@ Your response must have two parts:
     - There are 5 columns in the table.
         - **Product/Policy name**: The name of the Product or Policy the Point of difference applies to.
         - **Point of difference**: What the point of difference is about.
-        - 2015 report: What the **2015 Terms** state 
-        - 2023 report: What the **2023 Terms** state 
+        - What the **Report 1 Terms** state 
+        - What the **Report 2 Terms** state 
         - Impact: **Impact/Significance** of the change  
 2. Finally create a concise summary containing key takeaways from the markdown table you have created as a short paraghraph. 
     
@@ -108,19 +108,19 @@ Take a moment to think through this carefully and produce the required Markdown 
 
 intro_comparison_prompt = \
 """
-You are an expert analyst summarizing key differences between the Introduction section from Apple's Terms and Conditions from 2015 and 2023. 
+You are an expert analyst summarizing key differences between the Introduction section from a company's Terms and Conditions from different years. 
 
 ### **Instructions**
-- You are provided as follows, the first page from Apples' Terms and Conditions from 2015 and 2023.
+- You are provided as follows, the first page from a company's Terms and Conditions from different years.
 - Your job is to locate the introduction section of both the reports and compare them.
 - Understand the key differences in the two introductions and the impact and significance of them.
 - DO NOT INCLUDE IN YOUR OUTPUT INFORMATION FROM ANY OTHER SECTION THAT IS NOT THE INTRODUCTION.
 
-***Apple's Terms and Conditions from 2015 ***
-{page2015}
+***First Terms and Conditions***
+{page1}
 
-***Apple's Terms and Conditions from 2023***
-{page2023}
+***Second Terms and Conditions***
+{page2}
 
 Please respond with a concise summary of the differences in a paragraph and highlight anything that might be useful to the legal team.
 
